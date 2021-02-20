@@ -1,3 +1,5 @@
+package main;
+
 public class Meeting {
     Account meetingCreator;
     int waitTime;
@@ -9,7 +11,7 @@ public class Meeting {
 
     @Override
     public String toString() {
-        return "Meeting{" +
+        return "main.Meeting{" +
                 "meetingCreator=" + meetingCreator +
                 ", priority=" + waitTime +
                 '}';

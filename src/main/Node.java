@@ -1,3 +1,5 @@
+package main;
+
 /**
  * Constructor for nodes.
  *
@@ -71,7 +73,7 @@ public class Node<T> extends NodeIterator<T> {
      */
     @Override
     public String toString() {
-        String toReturn =  "node.Node{" +
+        String toReturn =  "node.main.Node{" +
                 "value=" + value;
                 if(next != null) {
                     toReturn+=", next=" + next.toString();

@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Arrays;
 
 public class MeetingQueue{
@@ -29,7 +31,7 @@ public class MeetingQueue{
 
     @Override
     public String toString() {
-        return "MeetingQueue{" +
+        return "main.MeetingQueue{" +
                 "queue=" + queue.toString() +
                 ", company=" + company +
                 ", employees=" + Arrays.toString(employees) +
