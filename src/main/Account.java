@@ -1,5 +1,5 @@
 package main;
-public abstract class Account extends Thread {
+public abstract class Account{
     private int id;
     private String fname;
     private String lname;
