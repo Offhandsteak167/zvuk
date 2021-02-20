@@ -1,3 +1,4 @@
+package main;
 public abstract class Account extends Thread {
     private int id;
     private String fname;

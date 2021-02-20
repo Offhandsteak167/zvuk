@@ -1,3 +1,4 @@
+package main;
 public class Interaction {
     class Date{
         private int year;
