@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="85a3b9ec-9ffe-422f-9ea3-bf76c850d538" name="Default Changelist" comment="changes">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/zvuk.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/public/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/public/styles/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/public/styles/normalize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/public/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/backend/client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/backend/get_directory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/backend/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/backend/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/backend/ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/backend/vendor/jquery-1.11.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/backend/vendor/modernizr-2.8.3-respond-1.4.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/views/business_directory.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/views/business_login.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/views/call_queue.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/views/customer_login.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/views/index.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server/views/meeting.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1olLANMM75cm3w1uKNc4ElXcvpH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.54" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/server/views" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/server/views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/public" />
+      <recent name="$PROJECT_DIR$/src/app/server/backend" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="zvuk" type="NodeJSConfigurationType" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85a3b9ec-9ffe-422f-9ea3-bf76c850d538" name="Default Changelist" comment="" />
+      <created>1613856090866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613856090866</updated>
+      <workItem from="1613856093428" duration="3742000" />
+      <workItem from="1613860067136" duration="888000" />
+    </task>
+    <task id="LOCAL-00001" summary="website body">
+      <created>1613856335507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613856335507</updated>
+    </task>
+    <task id="LOCAL-00002" summary="website body">
+      <created>1613856339193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613856339193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="website body">
+      <created>1613857136272</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613857136272</updated>
+    </task>
+    <task id="LOCAL-00004" summary="website body">
+      <created>1613857208282</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613857208282</updated>
+    </task>
+    <task id="LOCAL-00005" summary="website body">
+      <created>1613857372763</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613857372763</updated>
+    </task>
+    <task id="LOCAL-00006" summary="routes and new packages">
+      <created>1613857833163</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613857833163</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changes">
+      <created>1613858313814</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613858313814</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changes">
+      <created>1613858697459</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613858697459</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="website body" />
+    <MESSAGE value="routes and new packages" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+  </component>
+</project>
