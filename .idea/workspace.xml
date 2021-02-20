@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85a3b9ec-9ffe-422f-9ea3-bf76c850d538" name="Default Changelist" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/zvuk.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/normalize.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/client.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/get_directory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/vendor/jquery-1.11.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/vendor/modernizr-2.8.3-respond-1.4.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/views/business_directory.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/views/business_login.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/views/call_queue.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/views/customer_login.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/views/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/server/views/meeting.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/MeetingQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/MessageHandlers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/NodeIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/NodeQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +23,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,12 +46,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="10.17.54" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/server/views" />
+    <property name="jdk.selected.JAVA_MODULE" value="openjdk-15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/src" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/src" />
       <recent name="$PROJECT_DIR$/src/app/server/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -75,11 +64,26 @@
       <recent name="$PROJECT_DIR$/src/app/server/backend" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="src" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="zvuk" type="NodeJSConfigurationType" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
