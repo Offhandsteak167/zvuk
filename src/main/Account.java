@@ -12,4 +12,7 @@ public abstract class Account{
         this.password = password;
         this.id = email.hashCode();
     }
+    public boolean logIn(String email, String password){
+        return this.email.equals(email) && this.password.equals(password);
+    }
 }
