@@ -29,12 +29,8 @@ public class UserHandler {
 
     public void AddCustomerToDB(AccountInformation customer_info) throws IOException {
         Customer customer = customer_info.createCustomerAccount();
-        var userDataString = toString((Serializable) customer);
+        var userDataString = toString(customer);
         Connect.insert_new_account(userDataString);
-    }
-
-    public static void testCommand(){
-        System.out.println("WOWZA!");
     }
 
 }

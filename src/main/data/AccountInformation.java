@@ -4,10 +4,10 @@ import main.Customer;
 
 public class AccountInformation {
     private int id;
-    private final String fname;
-    private final String lname;
-    private final String email;
-    private final String password;
+    private String fname;
+    private String lname;
+    private String email;
+    private String password;
     private String address;
     private String payment;
 
