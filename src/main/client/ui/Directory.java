@@ -113,9 +113,10 @@ public class Directory extends Application {
                 return;
             }
 
-            DummyDatabase.companies.get(Integer.parseInt(nameField.getText())).getMeetingQueue().addMeetingToQueue(new Meeting(customer));
-
-            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
+            Meeting m = new Meeting(customer);
+            DummyDatabase.companies.get(Integer.parseInt(nameField.getText())).getMeetingQueue().addMeetingToQueue(m);
+            MyLauncher.session.account.setMeeting(m);
+            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Meeting queue successful!", "Please wait on the next page for your meeting to start.");
         });
     }
 
@@ -128,8 +129,7 @@ public class Directory extends Application {
         alert.show();
     }
 
-    public static void startUp(Customer c) {
-        customer = c;
-        launch(new String[0]);
+    public static void startUp() {
+        launch();
     }
 }

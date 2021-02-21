@@ -9,7 +9,8 @@ import java.sql.Statement;
 
 public class Test {
     public static void main(String[] args) {
-        testConnect();
+        Process p = NodeHandler.start();
+        p.toString();
     }
     public static void testCustomer(){
         Customer c = new Customer("a","b","c","password", "a","a");

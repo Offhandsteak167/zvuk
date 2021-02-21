@@ -1,0 +1,1 @@
+lsof -aPi4 -Fn -p "$1"

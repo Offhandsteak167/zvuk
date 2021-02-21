@@ -42,6 +42,7 @@ public class Business extends Account {
     public void startMeeting(Meeting m){
         this.start = new Date(System.currentTimeMillis());
         this.inMeeting = true;
+        currentMeeting = m;
         m.businessRep = this;
         m.startProcess();
 
@@ -50,6 +51,8 @@ public class Business extends Account {
     public Interaction endMeeting(int rating){
         Interaction i = new Interaction(this.start,  rating,this.customer, this);
         this.inMeeting = false;
+        currentMeeting.killProcess();
+        currentMeeting = null;
         return i;
     }
 

@@ -13,12 +13,13 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.dummy.DummyDatabase;
 
 public class Meeting extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Register to Zvuk");
+        primaryStage.setTitle("Waiting Room");
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();
@@ -66,7 +67,7 @@ public class Meeting extends Application {
 
     private void addUIControls(GridPane gridPane) {
         // Add Header
-        Label headerLabel = new Label("Registration Form");
+        Label headerLabel = new Label("Waiting Room");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
         gridPane.add(headerLabel, 0,0,2,1);
         GridPane.setHalignment(headerLabel, HPos.CENTER);
@@ -76,32 +77,8 @@ public class Meeting extends Application {
         Label nameLabel = new Label("Full Name : ");
         gridPane.add(nameLabel, 0,1);
 
-        // Add Name Text Field
-        TextField nameField = new TextField();
-        nameField.setPrefHeight(40);
-        gridPane.add(nameField, 1,1);
-
-
-        // Add Email Label
-        Label emailLabel = new Label("Email ID : ");
-        gridPane.add(emailLabel, 0, 2);
-
-        // Add Email Text Field
-        TextField emailField = new TextField();
-        emailField.setPrefHeight(40);
-        gridPane.add(emailField, 1, 2);
-
-        // Add Password Label
-        Label passwordLabel = new Label("Password : ");
-        gridPane.add(passwordLabel, 0, 3);
-
-        // Add Password Field
-        PasswordField passwordField = new PasswordField();
-        passwordField.setPrefHeight(40);
-        gridPane.add(passwordField, 1, 3);
-
         // Add Submit Button
-        Button submitButton = new Button("Submit");
+        Button submitButton = new Button("Leave");
         submitButton.setPrefHeight(40);
         submitButton.setDefaultButton(true);
         submitButton.setPrefWidth(100);
@@ -110,20 +87,8 @@ public class Meeting extends Application {
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
         submitButton.setOnAction(event -> {
-            if (nameField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your name");
-                return;
-            }
-            if (emailField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your email id");
-                return;
-            }
-            if (passwordField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
-                return;
-            }
-
-            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
+            MyLauncher.session.account.setMeeting(null);
+            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Meeting left!","Goodbye!");
         });
     }
 

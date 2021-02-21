@@ -17,6 +17,7 @@ public abstract class Account implements Serializable {
     private final String email;
     private final byte[] bytes;
     private byte[] password;
+    public Meeting currentMeeting;
 
     /**
      * Constructor for an Account, encrypts passwords based
@@ -29,6 +30,7 @@ public abstract class Account implements Serializable {
      */
     public Account(String fname, String lname, String email, String password) {
         this.email = email;
+        this.currentMeeting = null;
         this.bytes = new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09,
                 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
         this.password = cryptic.encrypt(password, this.bytes);
@@ -48,6 +50,10 @@ public abstract class Account implements Serializable {
         System.out.println(this.password);
         String pswd = cryptic.decrypt(this.password, this.bytes);
         return this.email.equals(email) && pswd.equals(password);
+    }
+
+    public void setMeeting(Meeting meeting) {
+        this.currentMeeting = meeting;
     }
 
     /**

@@ -13,6 +13,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.Main;
+import main.dummy.DummyDatabase;
 import main.shared.Meeting;
 import main.shared.MeetingQueue;
 
@@ -101,8 +102,12 @@ public class QueuePage extends Application {
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
-        submitButton.setOnAction(event -> showAlert(gridPane.getScene().getWindow()));
-    }
+        submitButton.setOnAction(event -> {
+            Meeting m = MyLauncher.session.company.getMeetingQueue().getQueue().dequeue();
+            MyLauncher.session.account.currentMeeting=m;
+            m.startProcess();
+            showAlert(gridPane.getScene().getWindow());
+        });    }
 
     private void showAlert(Window owner) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

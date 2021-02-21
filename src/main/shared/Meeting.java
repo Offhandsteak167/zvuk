@@ -12,6 +12,7 @@ public class Meeting {
     final int waitTime;
     Process process;
     Interaction interaction;
+    int port;
 
     public Meeting(Customer meetingCreator){
         this.meetingCreator = meetingCreator;
@@ -19,6 +20,7 @@ public class Meeting {
         process = null;
         interaction = null;
         businessRep = null;
+        port = 0;
     }
 
     public void setBusinessRep(Business b){

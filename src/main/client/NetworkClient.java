@@ -1,7 +1,5 @@
 package main.client;
 
-// A simple Client Server Protocol .. Client for Echo Server
-
 import main.shared.HandleCommands;
 import main.server.Command;
 import main.server.Packet;

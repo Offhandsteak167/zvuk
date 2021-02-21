@@ -3,9 +3,12 @@ package main.client.ui;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.stage.Stage;
+import main.client.Session;
 import main.shared.Customer;
 
 public class MyLauncher {
+    public static Session session;
+
     public static void signUp() {
         try {
             // Because we need to init the JavaFX toolkit - which usually Application.launch does
@@ -36,7 +39,7 @@ public class MyLauncher {
         }
     }
 
-    public static void directory(Customer c) {
+    public static void directory() {
         try {
             // Because we need to init the JavaFX toolkit - which usually Application.launch does
             // I'm not sure if this way of launching has any effect on anything
@@ -53,6 +56,9 @@ public class MyLauncher {
 
     public static void main(String[] args){
         signIn();
+        session = new Session(null);
+        directory();
+
     }
 
 }
