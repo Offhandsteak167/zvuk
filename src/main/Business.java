@@ -11,6 +11,11 @@ public class Business extends Account {
         super(fname, lname, email, password);
         this.company = company;
     }
+
+    public Company getCompany(){
+        return company;
+    }
+
     public boolean isInMeeting(){
         return this.inMeeting;
     }

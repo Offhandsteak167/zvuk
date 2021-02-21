@@ -8,6 +8,4 @@ public class Customer extends Account{
         this.address = address;
         this.payment = payment;
     }
-
-
 }
