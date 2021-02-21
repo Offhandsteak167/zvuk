@@ -1,5 +1,6 @@
 package main;
 
+import main.util.Email;
 import main.data.AccountInformation;
 import main.dummy.DummyDatabase;
 import main.shared.Account;
@@ -17,7 +18,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         DummyDatabase.getContents(new File("test.wtdb"));
         AccountInformation jakeDownie = new AccountInformation("Jake","Downie","jwd2488@rit.edu","JakeShot");
-       // Email.send(jakeDownie);
+        Email.send(jakeDownie.email());
     }
 
     public static Company createTestCompany() {

@@ -1,0 +1,77 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"85a3b9ec-9ffe-422f-9ea3-bf76c850d538\" name=\"Default Changelist\" comment=\"changes\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/jsLibraryMappings.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/zvuk.iml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/public/styles/main.css\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/public/styles/normalize.css\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/public/styles/normalize.min.css\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/public/styles/styles.css\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/routes.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/backend/client.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/backend/get_directory.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/backend/login.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/backend/server.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/backend/ui.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/backend/vendor/jquery-1.11.2.min.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/backend/vendor/modernizr-2.8.3-respond-1.4.2.min.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/views/business_directory.ejs\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/views/business_login.ejs\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/views/call_queue.ejs\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/views/customer_login.ejs\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/views/index.ejs\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/server/views/meeting.ejs\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/index.html\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/package-lock.json\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/package.json\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1olLANMM75cm3w1uKNc4ElXcvpH\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"javascript.nodejs.core.library.configured.version\" value=\"10.19.0\" />\n    <property name=\"javascript.nodejs.core.library.typings.version\" value=\"10.17.54\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/app/server/views\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app/server/views\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app/public\" />\n      <recent name=\"$PROJECT_DIR$/src/app/server/backend\" />\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"zvuk\" type=\"NodeJSConfigurationType\" working-dir=\"$PROJECT_DIR$\">\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"85a3b9ec-9ffe-422f-9ea3-bf76c850d538\" name=\"Default Changelist\" comment=\"\" />\n      <created>1613856090866</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1613856090866</updated>\n      <workItem from=\"1613856093428\" duration=\"3742000\" />\n      <workItem from=\"1613860067136\" duration=\"888000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"website body\">\n      <created>1613856335507</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613856335507</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"website body\">\n      <created>1613856339193</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613856339193</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"website body\">\n      <created>1613857136272</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613857136272</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"website body\">\n      <created>1613857208282</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613857208282</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"website body\">\n      <created>1613857372763</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613857372763</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"routes and new packages\">\n      <created>1613857833163</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613857833163</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"changes\">\n      <created>1613858313814</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613858313814</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"changes\">\n      <created>1613858697459</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1613858697459</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"9\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"website body\" />\n    <MESSAGE value=\"routes and new packages\" />\n    <MESSAGE value=\"changes\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"changes\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 189d104dd064cbb0c392c730a87fd82cf13a1a02)
++++ b/.idea/workspace.xml	(date 1613864321136)
+@@ -2,33 +2,7 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="85a3b9ec-9ffe-422f-9ea3-bf76c850d538" name="Default Changelist" comment="changes">
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/zvuk.iml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/main.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/normalize.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/normalize.min.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/public/styles/styles.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/routes.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/client.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/get_directory.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/login.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/server.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/ui.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/vendor/jquery-1.11.2.min.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/backend/vendor/modernizr-2.8.3-respond-1.4.2.min.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/views/business_directory.ejs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/views/business_login.ejs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/views/call_queue.ejs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/views/customer_login.ejs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/views/index.ejs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/server/views/meeting.ejs" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,6 +19,14 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitSEFilterConfiguration">
++    <file-type-list>
++      <filtered-out-file-type name="LOCAL_BRANCH" />
++      <filtered-out-file-type name="REMOTE_BRANCH" />
++      <filtered-out-file-type name="TAG" />
++      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
++    </file-type-list>
+   </component>
+   <component name="ProjectId" id="1olLANMM75cm3w1uKNc4ElXcvpH" />
+   <component name="ProjectLevelVcsManager">
+@@ -153,6 +135,16 @@
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.History.Properties">
++    <option name="COLUMN_ID_ORDER">
++      <list>
++        <option value="Default.Root" />
++        <option value="Default.Author" />
++        <option value="Default.Date" />
++        <option value="Default.Subject" />
++      </list>
++    </option>
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">

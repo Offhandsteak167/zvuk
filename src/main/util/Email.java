@@ -44,7 +44,7 @@ public class Email {
         return message;
     }
 
-    public static void Send(String recipient)throws IOException, MessagingException, GeneralSecurityException {
+    public static void send(String recipient)throws IOException, MessagingException, GeneralSecurityException {
         Gmail service = CreateGmail.newInstance();
         Message message = createMessageWithEmail(createEmail(recipient));
         service.users().messages().send(message);
