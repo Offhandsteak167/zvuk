@@ -11,8 +11,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class EchoServer {
-    public static void main(String args[]){
+public class EchoServer extends Thread{
+    public void run(){
 
 
         Socket s=null;
