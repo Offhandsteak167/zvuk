@@ -15,7 +15,7 @@ public class EchoServer extends Thread{
     public void run(){
 
 
-        Socket s=null;
+        Socket s;
         ServerSocket ss2=null;
         System.out.println("Server Listening......");
         try{
@@ -30,6 +30,7 @@ public class EchoServer extends Thread{
 
         while(true){
             try{
+                assert ss2 != null;
                 s= ss2.accept();
                 System.out.println("connection Established");
                 ServerThread st=new ServerThread(s);
@@ -53,7 +54,7 @@ class ServerThread extends Thread{
     String line=null;
     BufferedReader  is = null;
     PrintWriter os=null;
-    Socket s=null;
+    Socket s;
 
     public ServerThread(Socket s){
         this.s=s;

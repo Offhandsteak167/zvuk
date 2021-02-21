@@ -7,12 +7,13 @@ import java.io.InputStreamReader;
 
 public class NodeHandler {
     public static Process start(Meeting m) {
-        String link = "";
+        String link;
         try {
             Runtime rt = Runtime.getRuntime();
             //String[] commands = {"wc", "config/https-config.js"};
             String commands = "main/util/helper.sh";
             Process proc = rt.exec(commands);
+            m.running = true;
             BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
             String line;
             while ((line = in.readLine()) != null) {

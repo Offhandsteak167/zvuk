@@ -1,9 +1,7 @@
 package main.client;
 
 import main.shared.Account;
-import main.shared.Business;
 import main.shared.Company;
-import main.shared.Customer;
 
 public class Session {
     public Account account;

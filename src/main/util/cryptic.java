@@ -33,8 +33,7 @@ public class cryptic {
             System.out.println(e.getMessage());
             return "";
         }
-        byte[] input = p;
-        cipher.update(input);
+        cipher.update(p);
         try {
             byte[] decipheredText = cipher.doFinal();
             return new String(decipheredText, StandardCharsets.UTF_8);

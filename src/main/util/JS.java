@@ -6,7 +6,7 @@ public class JS {
         try {
             Process p = Runtime.getRuntime().exec("live-server --port=4444 --https=../../config/https-config.js");
 
-        }catch(Exception e){}
+        }catch(Exception ignored){}
 
     }
 }

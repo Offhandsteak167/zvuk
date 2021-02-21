@@ -2,13 +2,12 @@ package main.server;
 
 import java.io.*;
 import java.net.InetAddress;
-import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 public class Packet implements Serializable {
-    private int len;
-    private InetAddress address = null;
-    private int port;
+    private final int len;
+    private InetAddress address;
+    private final int port;
     private String buf;
 
     public Packet(Object o, int port, InetAddress address) throws IOException {

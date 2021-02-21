@@ -1,7 +1,9 @@
 package main.util;
 
 public class Logger {
-    NodeQueue<Event> events;
+
+    final NodeQueue<Event> events;
+
     public Logger(){
         events = new NodeQueue<>();
     }

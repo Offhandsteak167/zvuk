@@ -13,6 +13,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.util.MeetingHandler;
 import main.util.NodeHandler;
 
 public class Meeting extends Application {
@@ -66,6 +67,8 @@ public class Meeting extends Application {
     }
 
     private void addUIControls(GridPane gridPane) {
+
+
         // Add Header
         Label headerLabel = new Label("Waiting Room");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
@@ -75,7 +78,7 @@ public class Meeting extends Application {
 
         Label nameLabel;
         // Add Name Label
-        if ( MyLauncher.session.account != null){
+        if ( MyLauncher.session.account.currentMeeting != null){
             nameLabel= new Label(MyLauncher.session.account.currentMeeting.toString());
         } else {
             nameLabel = new Label("Unused Room");
@@ -102,25 +105,30 @@ public class Meeting extends Application {
 
         submitButton.setOnAction(event -> {
             if (MyLauncher.session.account.currentMeeting != null) {
-                NodeHandler.start(MyLauncher.session.account.currentMeeting);
-                MyLauncher.session.account.currentMeeting.openMeetingLink();
+                if (MyLauncher.session.account.currentMeeting.running){
+                    MeetingHandler meetingHandler = new MeetingHandler(MyLauncher.session.account.currentMeeting.link);
+                    meetingHandler.start();
+                } else {
+                    NodeHandler.start(MyLauncher.session.account.currentMeeting);
+                }
             } else {
-                showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "No meeting!","Sorry!");
+                showAlert(gridPane.getScene().getWindow(), "No meeting!","Sorry!");
             }
 
         });
         leaveButton.setOnAction(event -> {
+
             MyLauncher.session.account.currentMeeting.killProcess();
             MyLauncher.session.account.setMeeting(null);
             Stage stage = (Stage) submitButton.getScene().getWindow();
             stage.close();
             MyLauncher.launcher();
-            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Meeting left!","Goodbye!");
+            showAlert(gridPane.getScene().getWindow(), "Meeting left!","Goodbye!");
         });
     }
 
-    private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
-        Alert alert = new Alert(alertType);
+    private void showAlert(Window owner, String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);

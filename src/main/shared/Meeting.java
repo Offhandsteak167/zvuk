@@ -3,7 +3,6 @@ package main.shared;
 import main.util.NodeHandler;
 import main.server.ProcessWrapper;
 import main.server.ServerSetup;
-import main.util.LinkHandler;
 
 import java.util.Date;
 
@@ -12,8 +11,9 @@ public class Meeting {
     Business businessRep;
     final int waitTime;
     Process process;
+    public boolean running;
     Interaction interaction;
-    int port;
+    final int port;
     public String link;
 
     public Meeting(Customer meetingCreator){
@@ -21,6 +21,7 @@ public class Meeting {
         waitTime = 0;
         process = null;
         interaction = null;
+        running = false;
         businessRep = null;
         port = 0;
         link = null;
@@ -48,9 +49,6 @@ public class Meeting {
         ServerSetup.processes.add(new ProcessWrapper(process));
     }
 
-    public void openMeetingLink(){
-        LinkHandler.openWebpage(link);
-    }
 
     @Override
     public String toString() {

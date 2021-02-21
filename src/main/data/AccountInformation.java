@@ -6,10 +6,10 @@ import java.io.Serializable;
 
 public class AccountInformation implements Serializable {
     private int id;
-    private String fname;
-    private String lname;
-    private String email;
-    private String password;
+    private final String fname;
+    private final String lname;
+    private final String email;
+    private final String password;
     private String address;
     private String payment;
 

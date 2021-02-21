@@ -11,7 +11,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.Main;
 import main.client.NetworkClient;
 import main.data.AccountInformation;
 import main.server.Command;

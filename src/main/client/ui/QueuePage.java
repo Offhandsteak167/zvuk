@@ -99,13 +99,14 @@ public class QueuePage extends Application {
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
         submitButton.setOnAction(event -> {
-            Meeting m = MyLauncher.session.company.getMeetingQueue().getQueue().dequeue();
-            MyLauncher.session.account.currentMeeting=m;
-            Stage stage = (Stage) submitButton.getScene().getWindow();
+            try {
+                MyLauncher.session.account.currentMeeting = DummyDatabase.companies.get(0).getMeetingQueue().getQueue().dequeue();
+            } catch (Exception e){
+                System.out.println(DummyDatabase.companies.get(0).toString());
+            }
+            Stage stage = (Stage) headerLabel.getScene().getWindow();
             stage.close();
             MyLauncher.launcher();
-            m.startProcess();
-            showAlert(gridPane.getScene().getWindow());
         });    }
 
     private void showAlert(Window owner) {

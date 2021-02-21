@@ -8,18 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.dummy.DummyDatabase;
-import main.shared.Company;
-import main.shared.Customer;
-import main.shared.Meeting;
-
-import java.util.List;
 
 public class LauncherPage extends Application {
 
@@ -122,7 +114,7 @@ public class LauncherPage extends Application {
             GridPane.setHalignment(SignUp, HPos.CENTER);
             GridPane.setMargin(SignUp, new Insets(20, 0,20,0));
 
-             LoginCustomer = new Button("Customer Login");
+             LoginCustomer = new Button("Login");
             LoginCustomer.setPrefHeight(40);
             LoginCustomer.setDefaultButton(true);
             LoginCustomer.setPrefWidth(150);
@@ -130,13 +122,6 @@ public class LauncherPage extends Application {
             GridPane.setHalignment(LoginCustomer, HPos.CENTER);
             GridPane.setMargin(LoginCustomer, new Insets(20, 0,20,0));
 
-             LoginBusiness = new Button("Business Login");
-            LoginBusiness.setPrefHeight(40);
-            LoginBusiness.setDefaultButton(true);
-            LoginBusiness.setPrefWidth(150);
-            gridPane.add(LoginBusiness, 6, 4, 2, 1);
-            GridPane.setHalignment(LoginBusiness, HPos.CENTER);
-            GridPane.setMargin(LoginBusiness, new Insets(20, 0,20,0));
         }
         SignUp.setOnAction(event -> {
             Stage stage = (Stage) headerLabel.getScene().getWindow();

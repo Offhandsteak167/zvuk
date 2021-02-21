@@ -6,7 +6,6 @@ import com.google.api.services.gmail.model.Message;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.security.GeneralSecurityException;
 import java.util.Properties;
 
 import javax.mail.MessagingException;
@@ -14,7 +13,6 @@ import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import com.sun.mail.imap.IMAPMessage;
 import main.util.CreateGmail;
 
 

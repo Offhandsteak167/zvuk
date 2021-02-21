@@ -15,11 +15,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.dummy.DummyDatabase;
-import main.shared.Company;
 import main.shared.Customer;
 import main.shared.Meeting;
-
-import java.util.List;
 
 public class Directory extends Application {
 
@@ -114,9 +111,13 @@ public class Directory extends Application {
             }
 
             Meeting m = new Meeting(customer);
-            DummyDatabase.companies.get((Integer.parseInt(nameField.getText()))-1).getMeetingQueue().addMeetingToQueue(m);
+            DummyDatabase.companies.get(
+                    Integer.parseInt(nameField.getText())
+            )
+                    .getMeetingQueue().addMeetingToQueue(m);
             MyLauncher.session.account.setMeeting(m);
             MyLauncher.session.account.currentMeeting.setMeetingCreator((Customer) MyLauncher.session.account);
+            System.out.println(DummyDatabase.companies.get(2).toString());
             Stage stage = (Stage) submitButton.getScene().getWindow();
             stage.close();
             MyLauncher.launcher();

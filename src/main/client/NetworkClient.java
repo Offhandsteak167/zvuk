@@ -14,7 +14,7 @@ import java.net.Socket;
 
 public class NetworkClient {
 
-    private NodeQueue<Command> commands;
+    private final NodeQueue<Command> commands;
 
     public NetworkClient(){
         commands = new NodeQueue<>();
@@ -54,7 +54,7 @@ public class NetworkClient {
 
     }
 
-    private void communicate(Socket s1, BufferedReader br, BufferedReader is, PrintWriter os) throws IOException {
+    private void communicate(Socket s1, BufferedReader br, BufferedReader is, PrintWriter os) {
         String line;
         String response;
         try (s1; br; is; os) {

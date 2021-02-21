@@ -4,9 +4,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Event {
-    private String level;
-    private String content;
-    private Date time;
+    private final String level;
+    private final String content;
+    private final Date time;
 
     public Event(String level, String content){
         Calendar c1 = Calendar.getInstance();

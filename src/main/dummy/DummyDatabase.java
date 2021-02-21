@@ -1,8 +1,10 @@
 package main.dummy;
 
 import main.shared.Account;
+import main.shared.Business;
 import main.shared.Company;
 import main.shared.Customer;
+import main.util.Logger;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,22 +17,30 @@ import java.util.ArrayList;
 
 public class DummyDatabase {
 
-    public static ArrayList<Account> accounts = new ArrayList<>()
+
+
+    public static final Logger logger = new Logger();
+    public static final ArrayList<Company> companies = new ArrayList<>()
     {
         {
-            add(new Customer("Jake","Downie","jakedownie8@gmail.com","123","78 Battin","Plan 1"));
-        }
-    };
-    public static ArrayList<Company> companies = new ArrayList<>()
-    {
-        {
-            add(new Company("Joe's Subs"));
+            add(new Company());
             add(new Company("Pa's Pizza Parlor"));
             add(new Company("Ritchie's Bricks"));
         }
     };
 
-    public static String mime = "wtdb";
+    public static final ArrayList<Account> accounts = new ArrayList<>()
+    {
+        {
+            add(new Customer("Jake","Downie","jakedownie8@gmail.com","123","78 Battin","Plan 1"));
+            add(new Business("Artie","G","artieg@gmail.com","123",companies.get(0)));
+
+
+        }
+    };
+
+
+    public static final String mime = "wtdb";
 
     public static boolean addObject(File file, Object object) throws IOException
     {
@@ -76,7 +86,7 @@ public class DummyDatabase {
         {
             BufferedReader br = new BufferedReader(new FileReader(file));
             boolean IsGood = false;
-            ArrayList<String> linestoadd = new ArrayList<String>();
+            ArrayList<String> linestoadd = new ArrayList<>();
             while(br.ready())
             {
                 String line = br.readLine();
@@ -108,9 +118,9 @@ public class DummyDatabase {
         }
     }
 
-    public static ArrayList<String> getContents(File file) throws IOException
+    public static void getContents(File file) throws IOException
     {
-        ArrayList<String> contents = new ArrayList<String>();
+        ArrayList<String> contents = new ArrayList<>();
         if(file.getName().endsWith(mime))
         {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -120,6 +130,5 @@ public class DummyDatabase {
             }
             br.close();
         }
-        return contents;
     }
 }

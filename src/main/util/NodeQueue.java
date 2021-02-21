@@ -1,6 +1,6 @@
 package main.util;
 
-import main.server.ServerSetup;
+import static main.dummy.DummyDatabase.logger;
 
 public class NodeQueue<T> implements Queue<T> {
     private int size;
@@ -22,27 +22,27 @@ public class NodeQueue<T> implements Queue<T> {
     public void enqueue(T value){
         Node<T> node = new Node<>(value);
         if(back == null && front == null){
-            front = node;
+            this.front = node;
         } else {
-            assert back != null;
-            back.setNext(node);
+            assert this.back != null;
+            this.back.setNext(node);
         }
-        back = node;
-        size++;
+        this.back = node;
+        this.size++;
     }
 
     @Override
     public T dequeue() throws IndexOutOfBoundsException{
-        if (front == null){
-            ServerSetup.logger.addEvent(new Event("WARN","Nothing to dequeue in NodeQueue.java"));
+        if (this.front == null){
+            logger.addEvent(new Event("WARN","Nothing to dequeue in NodeQueue.java"));
             throw new IndexOutOfBoundsException("Nothing to dequeue.");
         }
-        T temp_val = front.getValue();
-        front = front.getNext();
-        if (size == 1){
-            back = null;
+        T temp_val = this.front.getValue();
+        this.front = this.front.getNext();
+        if (this.size == 1){
+            this.back = null;
         }
-        size--;
+        this.size--;
         return temp_val;
     }
     public Node<T> getPlace(int i){
@@ -56,19 +56,22 @@ public class NodeQueue<T> implements Queue<T> {
                 thing = thing.getNext();
                 z++;
             } else {
-                ServerSetup.logger.addEvent(new Event("WARN","Out of bound exception in NodeQueue.java"));
+                logger.addEvent(new Event("WARN","Out of bound exception in NodeQueue.java"));
                 throw new IndexOutOfBoundsException();
             }
         }
         return null;
-    }
+}
 
     @Override
     public String toString() {
-        return "main.util.NodeQueue{" +
-                "size=" + size +
-                ", items=" + front.toString() +
-                '}';
+        String toreturn = "main.util.NodeQueue{" +
+                "size=" + size;
+                if(front != null) {
+                    toreturn+=", items=" + front.toString();
+                }
+                toreturn+='}';
+                return toreturn;
     }
 
 }

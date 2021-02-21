@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Company implements Serializable {
-    private static int nextId = 1;
+    private static int nextId = 0;
     public final int id;
     private String name;
     private final MeetingQueue queue;
@@ -21,6 +21,15 @@ public class Company implements Serializable {
         this.name = name;
         this.id = nextId++;
         this.queue = new MeetingQueue();
+    }
+
+    public Company(){
+        name = "";
+        this.queue = new MeetingQueue();
+        id = nextId++;
+        queue.addMeetingToQueue(new Meeting(new Customer("Jake","Downie","jakedownie8@gmail.com","123","78 Battin","Plan 1")));
+        queue.addMeetingToQueue(new Meeting(new Customer("Jake","Downie","jakedownie8@gmail.com","123","78 Battin","Plan 1")));
+
     }
     final ArrayList<Interaction> currentInteractions = new ArrayList<>();
     final ArrayList<Interaction> interactionHistory = new ArrayList<>();
@@ -45,7 +54,17 @@ public class Company implements Serializable {
     }
 
     @Override
-    public String toString(){ return this.name + " id:" + this.id; }
+    public String toString() {
+        return "Company{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", queue=" + queue.toString() +
+                ", interactions=" + interactions +
+                ", employees=" + employees +
+                ", currentInteractions=" + currentInteractions +
+                ", interactionHistory=" + interactionHistory +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {

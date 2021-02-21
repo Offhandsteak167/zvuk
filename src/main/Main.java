@@ -1,18 +1,19 @@
 package main;
 
-import main.server.EchoServer;
-import main.util.Email;
+
+//Customer Account
+//jakedownie8@gmail.com
+//123
+
+
+//Business Account
+//artieg@gmail.com
+//123
+
+
 import main.data.AccountInformation;
-import main.dummy.DummyDatabase;
 import main.shared.Account;
 import main.shared.Company;
-import main.shared.Customer;
-import main.shared.Meeting;
-
-import javax.mail.MessagingException;
-import java.io.File;
-import java.io.IOException;
-import java.security.GeneralSecurityException;
 
 public class Main {
 
@@ -25,10 +26,6 @@ public class Main {
     }
 
     public static Company createTestCompany()  {
-        Company test = new Company("Test");
-        test.getMeetingQueue().getQueue().enqueue(new Meeting(new Customer("Jake","D","d","d","d","d")));
-        test.getMeetingQueue().getQueue().enqueue(new Meeting(new Customer("Jake","D","d","d","d","d")));
-        test.getMeetingQueue().getQueue().enqueue(new Meeting(new Customer("Jake","D","d","d","d","d")));
-        return test;
+        return new Company("Test");
     }
 }

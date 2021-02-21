@@ -14,7 +14,6 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.dummy.DummyDatabase;
-import main.shared.Customer;
 
 public class CustomerLogin extends Application {
 

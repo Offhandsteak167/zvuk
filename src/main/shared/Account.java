@@ -1,14 +1,8 @@
 package main.shared;
-import javax.crypto.*;
-import javax.crypto.spec.SecretKeySpec;
-import javax.mail.MessagingException;
-import java.io.IOException;
 import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
-import java.security.GeneralSecurityException;
+import java.util.Arrays;
 
 import main.util.cryptic;
-import main.util.Email;
 
 /**
  * Abstractly represents an account,
@@ -22,7 +16,7 @@ public abstract class Account implements Serializable {
     private final String email;
     private final byte[] bytes;
     public boolean elevated = false;
-    private byte[] password;
+    private final byte[] password;
     public Meeting currentMeeting;
 
     /**
@@ -55,7 +49,7 @@ public abstract class Account implements Serializable {
      */
     public boolean logIn(String email, String password){
         System.out.println(email);
-        System.out.println(this.password);
+        System.out.println(Arrays.toString(this.password));
         String pswd = cryptic.decrypt(this.password, this.bytes);
         return this.email.equals(email) && pswd.equals(password);
     }

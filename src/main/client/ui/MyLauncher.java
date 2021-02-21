@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.stage.Stage;
 import main.client.Session;
-import main.shared.Customer;
 
 public class MyLauncher {
     public static Session session;
@@ -74,7 +73,7 @@ public class MyLauncher {
 
             Platform.runLater(() -> {
                 // Your class that extends Application
-                new Meeting().start(new Stage());
+                new QueuePage().start(new Stage());
             });
         } catch (Exception e) {
             e.printStackTrace();
