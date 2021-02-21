@@ -41,7 +41,6 @@ public abstract class Account implements Serializable {
                 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
         this.password = cryptic.encrypt(password, this.bytes);
 
-        //Email.send(this.email);
     }
 
     /**
