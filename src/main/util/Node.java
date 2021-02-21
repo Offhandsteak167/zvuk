@@ -6,7 +6,6 @@ package main.util;
  * @param <T> the generic parameter
  * @author Jake Downie
  * @author jwd2488
- * @section 6
  */
 public class Node<T>  {
     private T value;

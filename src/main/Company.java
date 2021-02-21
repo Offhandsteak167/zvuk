@@ -7,17 +7,17 @@ public class Company {
     private static int nextId = 1;
     public final int id;
     private String name;
-    private MeetingQueue queue;
+    private final MeetingQueue queue;
 
-    ArrayList<Business> employees = new ArrayList<>();
+    final ArrayList<Business> employees = new ArrayList<>();
 
     public Company(String name) {
         this.name = name;
         this.id = nextId++;
         this.queue = new MeetingQueue();
     }
-    ArrayList<Interaction> currentInteractions = new ArrayList<>();
-    ArrayList<Interaction> interactionHistory = new ArrayList<>();
+    final ArrayList<Interaction> currentInteractions = new ArrayList<>();
+    final ArrayList<Interaction> interactionHistory = new ArrayList<>();
 
     public int getId(){ return this.id; }
     public ArrayList<Business> getEmployees() { return this.employees; }

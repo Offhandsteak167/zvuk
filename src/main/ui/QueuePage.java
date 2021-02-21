@@ -21,7 +21,7 @@ import main.MeetingQueue;
 public class QueuePage extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         primaryStage.setTitle("List of Current Calls");
 
         // Create the registration form grid pane
@@ -103,20 +103,14 @@ public class QueuePage extends Application {
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
-        submitButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-
-                showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome ");
-            }
-        });
+        submitButton.setOnAction(event -> showAlert(gridPane.getScene().getWindow()));
     }
 
-    private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle(title);
+    private void showAlert(Window owner) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Registration Successful!");
         alert.setHeaderText(null);
-        alert.setContentText(message);
+        alert.setContentText("Welcome ");
         alert.initOwner(owner);
         alert.show();
     }
