@@ -29,8 +29,8 @@ public class Email {
 
         email.setFrom(sender);
         email.addRecipient(javax.mail.Message.RecipientType.TO,recipient);
-        email.setSubject("Confirm your Zvuk account!");
-        email.setText("Development Test Message");
+        email.setSubject("Thank you for creating your Zvuk account!");
+        email.setText("Zvuk aims to reimagine the way local businesses interact with customers. By joining Zvuk you have taken the next step forward towards the future, thank you! - Jake, Patrick, Artie");
 
         return email;
     }
@@ -48,7 +48,6 @@ public class Email {
         Gmail service = CreateGmail.getInstance();
         Message message = createMessageWithEmail(createEmail(userId));
         message = service.users().messages().send("me", message).execute();
-
 
     }
 
