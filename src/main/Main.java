@@ -9,17 +9,19 @@ import main.shared.Company;
 import main.shared.Customer;
 import main.shared.Meeting;
 
+import javax.mail.MessagingException;
 import java.io.File;
 import java.io.IOException;
+import java.security.GeneralSecurityException;
 
 public class Main {
 
     public Account[] accounts = new Account[10];
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, GeneralSecurityException, MessagingException {
 
         AccountInformation jakeDownie = new AccountInformation("Jake","Downie","jwd2488@rit.edu","JakeShot");
-        //Email.send(jakeDownie.email());
+        Email.send(jakeDownie.getEmail());
     }
 
     public static Company createTestCompany() {
