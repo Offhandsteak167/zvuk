@@ -23,7 +23,7 @@ public class cryptic {
             return new byte[0];
         }
     }
-    public static String decrypt(byte[] p, byte[] b{
+    public static String decrypt(byte[] p, byte[] b){
         SecretKeySpec key = new SecretKeySpec(b, "AES");
         Cipher cipher;
         try {
