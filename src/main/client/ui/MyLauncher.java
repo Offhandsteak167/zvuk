@@ -23,8 +23,21 @@ public class MyLauncher {
             e.printStackTrace();
         }
     }
+    public static void signInB() {
+        try {
+            // Because we need to init the JavaFX toolkit - which usually Application.launch does
+            // I'm not sure if this way of launching has any effect on anything
+            new JFXPanel();
 
-    public static void signIn() {
+            Platform.runLater(() -> {
+                // Your class that extends Application
+                new CustomerLogin().start(new Stage());
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void signInC() {
         try {
             // Because we need to init the JavaFX toolkit - which usually Application.launch does
             // I'm not sure if this way of launching has any effect on anything
@@ -53,11 +66,53 @@ public class MyLauncher {
             e.printStackTrace();
         }
     }
+    public static void queue() {
+        try {
+            // Because we need to init the JavaFX toolkit - which usually Application.launch does
+            // I'm not sure if this way of launching has any effect on anything
+            new JFXPanel();
+
+            Platform.runLater(() -> {
+                // Your class that extends Application
+                new Meeting().start(new Stage());
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void meeting() {
+        try {
+            // Because we need to init the JavaFX toolkit - which usually Application.launch does
+            // I'm not sure if this way of launching has any effect on anything
+            new JFXPanel();
+
+            Platform.runLater(() -> {
+                // Your class that extends Application
+                new Meeting().start(new Stage());
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void launcher() {
+        try {
+            // Because we need to init the JavaFX toolkit - which usually Application.launch does
+            // I'm not sure if this way of launching has any effect on anything
+            new JFXPanel();
+
+            Platform.runLater(() -> {
+                // Your class that extends Application
+                new LauncherPage().start(new Stage());
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args){
-        signIn();
         session = new Session(null);
-        directory();
+        launcher();
+
 
     }
 

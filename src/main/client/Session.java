@@ -1,13 +1,14 @@
 package main.client;
 
 import main.shared.Account;
+import main.shared.Business;
 import main.shared.Company;
 import main.shared.Customer;
 
 public class Session {
     public Account account;
     public Company company;
-    private boolean authenticated;
+    public boolean authenticated;
     public Session(Account account){
         this.account = account;
         this.authenticated = false;
@@ -15,9 +16,8 @@ public class Session {
 
     public void setAccount(Account account) {
         this.account = account;
-    }
-
-    public void setAuthenticated(boolean authenticated) {
-        this.authenticated = authenticated;
+        if (account.elevated){
+            authenticated = true;
+        }
     }
 }

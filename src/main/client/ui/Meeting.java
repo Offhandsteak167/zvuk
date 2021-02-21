@@ -13,7 +13,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.NodeHandler;
 import main.dummy.DummyDatabase;
+import main.shared.Customer;
 
 public class Meeting extends Application {
 
@@ -73,12 +75,17 @@ public class Meeting extends Application {
         GridPane.setHalignment(headerLabel, HPos.CENTER);
         GridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
 
+        Label nameLabel;
         // Add Name Label
-        Label nameLabel = new Label("Full Name : ");
+        if ( MyLauncher.session.account != null){
+            nameLabel= new Label(MyLauncher.session.account.currentMeeting.toString());
+        } else {
+            nameLabel = new Label("Unused Room");
+        }
         gridPane.add(nameLabel, 0,1);
 
         // Add Submit Button
-        Button submitButton = new Button("Leave");
+        Button submitButton = new Button("Join");
         submitButton.setPrefHeight(40);
         submitButton.setDefaultButton(true);
         submitButton.setPrefWidth(100);
@@ -86,8 +93,30 @@ public class Meeting extends Application {
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
+        // Add Submit Button
+        Button leaveButton = new Button("End Meeting");
+        submitButton.setPrefHeight(40);
+        submitButton.setDefaultButton(true);
+        submitButton.setPrefWidth(100);
+        gridPane.add(leaveButton, 0, 6, 2, 1);
+        GridPane.setHalignment(leaveButton, HPos.CENTER);
+        GridPane.setMargin(leaveButton, new Insets(20, 0,20,0));
+
         submitButton.setOnAction(event -> {
+            if (MyLauncher.session.account.currentMeeting != null) {
+                NodeHandler.start(MyLauncher.session.account.currentMeeting);
+                MyLauncher.session.account.currentMeeting.openMeetingLink();
+            } else {
+                showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "No meeting!","Sorry!");
+            }
+
+        });
+        leaveButton.setOnAction(event -> {
+            MyLauncher.session.account.currentMeeting.killProcess();
             MyLauncher.session.account.setMeeting(null);
+            Stage stage = (Stage) submitButton.getScene().getWindow();
+            stage.close();
+            MyLauncher.launcher();
             showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Meeting left!","Goodbye!");
         });
     }

@@ -69,7 +69,7 @@ public class QueuePage extends Application {
 
     private void addUIControls(GridPane gridPane, MeetingQueue thisQueue) {
         // Add Header
-        Label headerLabel = new Label("Registration Form");
+        Label headerLabel = new Label("Call Queue");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
         gridPane.add(headerLabel, 0,0,2,1);
         GridPane.setHalignment(headerLabel, HPos.CENTER);
@@ -89,15 +89,11 @@ public class QueuePage extends Application {
             }
             gridPane.add(new Text(itemText), 1, count);
         }
-        // Add Name Label
-        Label nameLabel = new Label("Full Name : ");
-        gridPane.add(nameLabel, 0,1);
-
         // Add Submit Button
-        Button submitButton = new Button("Submit");
+        Button submitButton = new Button("Take Call");
         submitButton.setPrefHeight(40);
         submitButton.setDefaultButton(true);
-        submitButton.setPrefWidth(100);
+        submitButton.setPrefWidth(150);
         gridPane.add(submitButton, 0, 4, 2, 1);
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
@@ -105,6 +101,9 @@ public class QueuePage extends Application {
         submitButton.setOnAction(event -> {
             Meeting m = MyLauncher.session.company.getMeetingQueue().getQueue().dequeue();
             MyLauncher.session.account.currentMeeting=m;
+            Stage stage = (Stage) submitButton.getScene().getWindow();
+            stage.close();
+            MyLauncher.launcher();
             m.startProcess();
             showAlert(gridPane.getScene().getWindow());
         });    }

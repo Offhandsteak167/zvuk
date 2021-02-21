@@ -114,13 +114,14 @@ public class CustomerLogin extends Application {
                 if(DummyDatabase.accounts.get(i).getEmail().equals(emailField.getText())){
                     if(DummyDatabase.accounts.get(i).logIn(emailField.getText(), passwordField.getText())){
                         System.out.println("Login Successful");
-                        MyLauncher.session.setAccount((Customer) DummyDatabase.accounts.get(i));
-                        MyLauncher.session.setAuthenticated(true);
+                        MyLauncher.session.setAccount(DummyDatabase.accounts.get(i));
                         Stage stage = (Stage) submitButton.getScene().getWindow();
                         stage.close();
+                        MyLauncher.launcher();
                         showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Login Successful!", "Welcome " + emailField.getText());
+                    } else {
+                        showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Login Failed!", "Please try again!");
                     }
-                    showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Login Failed!", "Please try again!");
                 }
             }
 

@@ -21,6 +21,7 @@ import main.util.Email;
 public abstract class Account implements Serializable {
     private final String email;
     private final byte[] bytes;
+    public boolean elevated = false;
     private byte[] password;
     public Meeting currentMeeting;
 
@@ -62,6 +63,8 @@ public abstract class Account implements Serializable {
     public void setMeeting(Meeting meeting) {
         this.currentMeeting = meeting;
     }
+
+
 
     /**
      * gets the user's email

@@ -12,8 +12,6 @@ import java.sql.Statement;
 
 public class Test {
     public static void main(String[] args) {
-        Process p = NodeHandler.start();
-        p.toString();
     }
     public static void testCustomer() throws GeneralSecurityException, IOException, MessagingException {
         Customer c = new Customer("a","b","c","password", "a","a");

@@ -3,16 +3,18 @@ package main.shared;
 import main.NodeHandler;
 import main.server.ProcessWrapper;
 import main.server.ServerSetup;
+import main.util.LinkHandler;
 
 import java.util.Date;
 
 public class Meeting {
-    final Customer meetingCreator;
+    Customer meetingCreator;
     Business businessRep;
     final int waitTime;
     Process process;
     Interaction interaction;
     int port;
+    public String link;
 
     public Meeting(Customer meetingCreator){
         this.meetingCreator = meetingCreator;
@@ -21,10 +23,15 @@ public class Meeting {
         interaction = null;
         businessRep = null;
         port = 0;
+        link = null;
     }
 
     public void setBusinessRep(Business b){
         businessRep = b;
+    }
+
+    public void setMeetingCreator(Customer c){
+        meetingCreator = c;
     }
 
     public void setProcess(Process process) {
@@ -37,8 +44,12 @@ public class Meeting {
         interaction.setE(new Date(System.currentTimeMillis()));
     }
     public void startProcess(){
-        process = NodeHandler.start();
+        process = NodeHandler.start(this);
         ServerSetup.processes.add(new ProcessWrapper(process));
+    }
+
+    public void openMeetingLink(){
+        LinkHandler.openWebpage(link);
     }
 
     @Override

@@ -28,6 +28,7 @@ public class Business extends Account {
      */
     public Business(String fname, String lname, String email, String password, Company company) {
         super(fname, lname, email, password);
+        elevated = true;
         this.company = company;
     }
 

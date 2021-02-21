@@ -83,7 +83,7 @@ public class Directory extends Application {
         GridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
 
         // Add Name Label
-        Label nameLabel = new Label("Company Name : ");
+        Label nameLabel = new Label("Company ID : ");
         gridPane.add(nameLabel, 0,0);
 
         // Add Name Text Field
@@ -99,10 +99,10 @@ public class Directory extends Application {
         gridPane.add(new Text(itemText.toString()), 1, 2);
 
         // Add Submit Button
-        Button submitButton = new Button("Submit");
+        Button submitButton = new Button("Create Meeting");
         submitButton.setPrefHeight(40);
         submitButton.setDefaultButton(true);
-        submitButton.setPrefWidth(100);
+        submitButton.setPrefWidth(150);
         gridPane.add(submitButton, 0, 4, 2, 1);
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
@@ -116,6 +116,10 @@ public class Directory extends Application {
             Meeting m = new Meeting(customer);
             DummyDatabase.companies.get(Integer.parseInt(nameField.getText())).getMeetingQueue().addMeetingToQueue(m);
             MyLauncher.session.account.setMeeting(m);
+            MyLauncher.session.account.currentMeeting.setMeetingCreator((Customer) MyLauncher.session.account);
+            Stage stage = (Stage) submitButton.getScene().getWindow();
+            stage.close();
+            MyLauncher.launcher();
             showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Meeting queue successful!", "Please wait on the next page for your meeting to start.");
         });
     }
