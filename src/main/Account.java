@@ -1,5 +1,8 @@
 package main;
-public abstract class Account{
+
+import java.io.Serializable;
+
+public abstract class Account implements java.io.Serializable {
     private int id;
     private String fname;
     private String lname;
@@ -19,4 +22,6 @@ public abstract class Account{
     public String getEmail() {
         return email;
     }
+
+
 }
