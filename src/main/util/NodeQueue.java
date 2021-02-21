@@ -1,4 +1,4 @@
-package main;
+package main.util;
 
 public class NodeQueue<T> implements Queue<T> {
     private int size;
@@ -61,7 +61,7 @@ public class NodeQueue<T> implements Queue<T> {
 
     @Override
     public String toString() {
-        return "main.NodeQueue{" +
+        return "main.util.NodeQueue{" +
                 "size=" + size +
                 ", items=" + front.toString() +
                 '}';

@@ -1,4 +1,4 @@
-package main;
+package main.util;
 
 /**
  * Constructor for nodes.
@@ -73,7 +73,7 @@ public class Node<T>  {
      */
     @Override
     public String toString() {
-        String toReturn =  "node.main.Node{" +
+        String toReturn =  "node.main.util.Node{" +
                 "value=" + value;
                 if(next != null) {
                     toReturn+=", next=" + next.toString();

@@ -1,4 +1,4 @@
-package main;
+package main.ui;
 
 public class MyLauncher {
     public static void main(String[] args){

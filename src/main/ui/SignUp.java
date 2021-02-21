@@ -1,4 +1,4 @@
-package main;
+package main.ui;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -14,7 +14,7 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-public class Homepage extends Application {
+public class SignUp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -124,7 +124,6 @@ public class Homepage extends Application {
                     showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
                     return;
                 }
-
                 showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
             }
         });

@@ -1,4 +1,4 @@
-package main;
+package main.util;
 
 public class MessageHandlers {
     public static void sendMessage(String message){

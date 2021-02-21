@@ -1,4 +1,4 @@
-package main;
+package main.ui;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -14,6 +14,9 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.Main;
+import main.Meeting;
+import main.MeetingQueue;
 
 public class QueuePage extends Application {
 
@@ -65,7 +68,7 @@ public class QueuePage extends Application {
         return gridPane;
     }
 
-    private void addUIControls(GridPane gridPane,MeetingQueue thisQueue) {
+    private void addUIControls(GridPane gridPane, MeetingQueue thisQueue) {
         // Add Header
         Label headerLabel = new Label("Registration Form");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));

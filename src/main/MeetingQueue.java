@@ -1,5 +1,7 @@
 package main;
 
+import main.util.NodeQueue;
+
 import java.util.Arrays;
 
 public class MeetingQueue{
