@@ -86,4 +86,6 @@ public class Connect {
             }
         }
     }
+
+    public static void insertAccount(int ID, String fname, String lname, String email, )
 }
