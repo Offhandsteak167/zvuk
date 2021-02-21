@@ -39,14 +39,16 @@ public class Business extends Account {
         return this.inMeeting;
     }
 
-    public void startMeeting(Customer c){
-        this.customer = c;
+    public void startMeeting(Meeting m){
         this.start = new Date(System.currentTimeMillis());
         this.inMeeting = true;
+        m.businessRep = this;
+        m.startProcess();
+
     }
 
     public Interaction endMeeting(int rating){
-        Interaction i = new Interaction(this.start, new Date(System.currentTimeMillis()), rating,this.customer, this);
+        Interaction i = new Interaction(this.start,  rating,this.customer, this);
         this.inMeeting = false;
         return i;
     }

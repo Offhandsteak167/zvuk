@@ -9,6 +9,11 @@ public class Company implements Serializable {
     public final int id;
     private String name;
     private final MeetingQueue queue;
+    private ArrayList<Interaction> interactions;
+
+    public void addInteraction(Interaction e) {
+        interactions.add(e);
+    }
 
     final ArrayList<Business> employees = new ArrayList<>();
 
