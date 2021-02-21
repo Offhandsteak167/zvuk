@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Offhandsteak167/zvuk#readme",
   "dependencies": {
+    "@voxeet/voxeet-web-sdk": "^3.0.3",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "passport": "^0.4.1",
