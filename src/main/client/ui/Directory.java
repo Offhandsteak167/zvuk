@@ -114,7 +114,7 @@ public class Directory extends Application {
             }
 
             Meeting m = new Meeting(customer);
-            DummyDatabase.companies.get(Integer.parseInt(nameField.getText())).getMeetingQueue().addMeetingToQueue(m);
+            DummyDatabase.companies.get((Integer.parseInt(nameField.getText()))-1).getMeetingQueue().addMeetingToQueue(m);
             MyLauncher.session.account.setMeeting(m);
             MyLauncher.session.account.currentMeeting.setMeetingCreator((Customer) MyLauncher.session.account);
             Stage stage = (Stage) submitButton.getScene().getWindow();

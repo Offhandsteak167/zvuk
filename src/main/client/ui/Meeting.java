@@ -13,9 +13,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.NodeHandler;
-import main.dummy.DummyDatabase;
-import main.shared.Customer;
+import main.util.NodeHandler;
 
 public class Meeting extends Application {
 

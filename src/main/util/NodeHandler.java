@@ -1,12 +1,9 @@
-package main;
+package main.util;
 
-import main.server.ServerSetup;
 import main.shared.Meeting;
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
 
 public class NodeHandler {
     public static Process start(Meeting m) {
@@ -14,7 +11,7 @@ public class NodeHandler {
         try {
             Runtime rt = Runtime.getRuntime();
             //String[] commands = {"wc", "config/https-config.js"};
-            String commands = "main/helper.sh";
+            String commands = "main/util/helper.sh";
             Process proc = rt.exec(commands);
             BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
             String line;

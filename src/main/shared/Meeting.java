@@ -1,6 +1,6 @@
 package main.shared;
 
-import main.NodeHandler;
+import main.util.NodeHandler;
 import main.server.ProcessWrapper;
 import main.server.ServerSetup;
 import main.util.LinkHandler;
