@@ -1,8 +1,6 @@
-package main.ui;
+package main.client.ui;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -16,7 +14,7 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-public class CustomerLogin extends Application {
+public class BusinessLogin extends Application {
 
     @Override
     public void start(Stage primaryStage) {

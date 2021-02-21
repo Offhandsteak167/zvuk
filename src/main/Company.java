@@ -1,9 +1,10 @@
 package main;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Company {
+public class Company implements Serializable {
     private static int nextId = 1;
     public final int id;
     private String name;

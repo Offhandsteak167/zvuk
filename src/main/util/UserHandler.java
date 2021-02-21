@@ -33,4 +33,8 @@ public class UserHandler {
         Connect.insert_new_account(userDataString);
     }
 
+    public static void testCommand(){
+        System.out.println("WOWZA!");
+    }
+
 }

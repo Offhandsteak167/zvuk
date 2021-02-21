@@ -2,9 +2,10 @@ package main;
 
 import main.util.NodeQueue;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class MeetingQueue{
+public class MeetingQueue implements Serializable {
     public final NodeQueue<Meeting> queue;
     public Company company;
     public Account[] employees;

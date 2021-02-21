@@ -1,6 +1,7 @@
 package main;
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
+import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -11,7 +12,7 @@ import java.nio.charset.StandardCharsets;
  * @author Patrick B
  * @author Artie G
  */
-public abstract class Account{
+public abstract class Account implements Serializable {
     private final String email;
     private final byte[] bytes;
     private byte[] password;

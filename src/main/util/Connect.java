@@ -9,7 +9,7 @@ import java.sql.*;
 public class Connect {
 
     public static void  insert_new_account(String input){
-
+        //TODO: CHECK IF USER ALREADY EXISTS AND RETURN STATE
         Connection connection = null;
         try
         {

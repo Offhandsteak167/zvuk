@@ -1,5 +1,7 @@
 package main.util;
 
+import java.io.Serializable;
+
 /**
  * Constructor for nodes.
  *
@@ -7,7 +9,7 @@ package main.util;
  * @author Jake Downie
  * @author jwd2488
  */
-public class Node<T>  {
+public class Node<T> implements Serializable {
     private T value;
     private Node<T> next;
 

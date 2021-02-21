@@ -1,8 +1,6 @@
-package main.ui;
+package main.client.ui;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -16,11 +14,11 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-public class BusinessLogin extends Application {
+public class Meeting extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Login to Zvuk");
+        primaryStage.setTitle("Register to Zvuk");
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();
@@ -74,6 +72,16 @@ public class BusinessLogin extends Application {
         GridPane.setHalignment(headerLabel, HPos.CENTER);
         GridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
 
+        // Add Name Label
+        Label nameLabel = new Label("Full Name : ");
+        gridPane.add(nameLabel, 0,1);
+
+        // Add Name Text Field
+        TextField nameField = new TextField();
+        nameField.setPrefHeight(40);
+        gridPane.add(nameField, 1,1);
+
+
         // Add Email Label
         Label emailLabel = new Label("Email ID : ");
         gridPane.add(emailLabel, 0, 2);
@@ -102,6 +110,10 @@ public class BusinessLogin extends Application {
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
         submitButton.setOnAction(event -> {
+            if (nameField.getText().isEmpty()) {
+                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your name");
+                return;
+            }
             if (emailField.getText().isEmpty()) {
                 showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your email id");
                 return;
@@ -111,7 +123,7 @@ public class BusinessLogin extends Application {
                 return;
             }
 
-            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + emailField.getText());
+            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
         });
     }
 

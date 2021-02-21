@@ -1,33 +1,29 @@
-package main.ui;
+package main.client.ui;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.Main;
-import main.Meeting;
-import main.MeetingQueue;
 
-public class QueuePage extends Application {
+public class Directory extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("List of Current Calls");
+        primaryStage.setTitle("Register to Zvuk");
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();
         // Add UI controls to the registration form grid pane
-        addUIControls(gridPane, Main.createTestCompany().getMeetingQueue());
+        addUIControls(gridPane);
         // Create a scene with registration form grid pane as the root node
         Scene scene = new Scene(gridPane, 800, 500);
         // Set the scene in primary stage
@@ -68,7 +64,7 @@ public class QueuePage extends Application {
         return gridPane;
     }
 
-    private void addUIControls(GridPane gridPane, MeetingQueue thisQueue) {
+    private void addUIControls(GridPane gridPane) {
         // Add Header
         Label headerLabel = new Label("Registration Form");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
@@ -76,23 +72,33 @@ public class QueuePage extends Application {
         GridPane.setHalignment(headerLabel, HPos.CENTER);
         GridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
 
-        int count = 0;
-        for (int i = 0; i < thisQueue.getQueue().size(); i++) {
-            String itemText = "";
-            try {
-                Meeting item = thisQueue.getQueue().getPlace(i).getValue();
-                if (!item.toString().equals("")) {
-                    itemText += item.toString() + "\n";
-                    ++count;
-                }
-            } catch (IndexOutOfBoundsException ignored) {
-
-            }
-            gridPane.add(new Text(itemText), 1, count);
-        }
         // Add Name Label
         Label nameLabel = new Label("Full Name : ");
         gridPane.add(nameLabel, 0,1);
+
+        // Add Name Text Field
+        TextField nameField = new TextField();
+        nameField.setPrefHeight(40);
+        gridPane.add(nameField, 1,1);
+
+
+        // Add Email Label
+        Label emailLabel = new Label("Email ID : ");
+        gridPane.add(emailLabel, 0, 2);
+
+        // Add Email Text Field
+        TextField emailField = new TextField();
+        emailField.setPrefHeight(40);
+        gridPane.add(emailField, 1, 2);
+
+        // Add Password Label
+        Label passwordLabel = new Label("Password : ");
+        gridPane.add(passwordLabel, 0, 3);
+
+        // Add Password Field
+        PasswordField passwordField = new PasswordField();
+        passwordField.setPrefHeight(40);
+        gridPane.add(passwordField, 1, 3);
 
         // Add Submit Button
         Button submitButton = new Button("Submit");
@@ -103,14 +109,29 @@ public class QueuePage extends Application {
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
-        submitButton.setOnAction(event -> showAlert(gridPane.getScene().getWindow()));
+        submitButton.setOnAction(event -> {
+            if (nameField.getText().isEmpty()) {
+                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your name");
+                return;
+            }
+            if (emailField.getText().isEmpty()) {
+                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your email id");
+                return;
+            }
+            if (passwordField.getText().isEmpty()) {
+                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
+                return;
+            }
+
+            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
+        });
     }
 
-    private void showAlert(Window owner) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Registration Successful!");
+    private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
         alert.setHeaderText(null);
-        alert.setContentText("Welcome ");
+        alert.setContentText(message);
         alert.initOwner(owner);
         alert.show();
     }
