@@ -18,6 +18,7 @@ import main.util.CreateGmail;
 
 
 public class Email {
+    /**
     private static MimeMessage createEmail(String to) throws MessagingException {
         Properties properties = new Properties();
         Session session = Session.getDefaultInstance(properties,null);
@@ -45,7 +46,7 @@ public class Email {
 
     public static void Send(String recipient)throws IOException, MessagingException, GeneralSecurityException {
         Gmail service = CreateGmail.newInstance();
-        service.users().messages().send()
+        service.users().messages().send();
     }
-
+*/
 }

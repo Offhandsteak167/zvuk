@@ -87,5 +87,13 @@ public class Connect {
         }
     }
 
-    public static void insertAccount(int ID, String fname, String lname, String email, )
+    public static void insertAccount(Statement statement, int ID, String fname, String lname, String email, String password, String address, String payment){
+        try {
+            String temp = "insert into Accounts values(" + ID + ", '" + fname + "', '"+ lname + "', '" + email + "', '" + password + "')";
+            System.out.println(temp);
+            statement.executeUpdate(temp);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }
