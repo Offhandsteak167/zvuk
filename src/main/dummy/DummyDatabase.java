@@ -1,5 +1,8 @@
 package main.dummy;
 
+import main.shared.Account;
+import main.shared.Company;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -10,6 +13,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class DummyDatabase {
+
+    public static ArrayList<Account> accounts = new ArrayList<>();
+    public static ArrayList<Company> companies = new ArrayList<>();
 
     public static String mime = "wtdb";
 

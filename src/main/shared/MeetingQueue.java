@@ -3,6 +3,7 @@ package main.shared;
 import main.util.NodeQueue;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MeetingQueue implements Serializable {
@@ -16,6 +17,14 @@ public class MeetingQueue implements Serializable {
 
     public NodeQueue<Meeting> getQueue() {
         return queue;
+    }
+
+    public ArrayList<Customer> getMembers() {
+        ArrayList<Customer> toReturn = new ArrayList<>();
+        for (int i = 0; i < queue.size(); i++) {
+            toReturn.add(queue.getPlace(i).getValue().meetingCreator);
+        }
+        return toReturn;
     }
 
     public void addMeetingToQueue(Meeting meeting){

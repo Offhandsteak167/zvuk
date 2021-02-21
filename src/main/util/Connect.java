@@ -1,5 +1,9 @@
 package main.util;
 
+import main.dummy.DummyDatabase;
+
+import java.io.File;
+import java.io.IOException;
 import java.sql.*;
 
 /**
@@ -8,7 +12,17 @@ import java.sql.*;
  */
 public class Connect {
 
-    public static void  insert_new_account(String input){
+    public static boolean does_account_exist(String input) throws IOException {
+        return DummyDatabase.containsObject(new File("test.wtdb"),input);
+    }
+
+    public static void  insert_new_account(String input) throws IOException {
+        if (!does_account_exist(input)) {
+            DummyDatabase.addObject(new File("test.wtdb"), input);
+        } else {
+            throw new IOException("Account already exists!");
+        }
+
         //TODO: CHECK IF USER ALREADY EXISTS AND RETURN STATE
         Connection connection = null;
         try
