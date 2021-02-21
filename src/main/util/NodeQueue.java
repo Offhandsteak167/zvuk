@@ -32,6 +32,7 @@ public class NodeQueue<T> implements Queue<T> {
     @Override
     public T dequeue() throws IndexOutOfBoundsException{
         if (front == null){
+            ServerSetup.logger.addEvent(new Event("WARN","Nothing to dequeue in NodeQueue.java"));
             throw new IndexOutOfBoundsException("Nothing to dequeue.");
         }
         T temp_val = front.getValue();
@@ -53,6 +54,7 @@ public class NodeQueue<T> implements Queue<T> {
                 thing = thing.getNext();
                 z++;
             } else {
+                ServerSetup.logger.addEvent(new Event("WARN","Out of bound exception in NodeQueue.java"));
                 throw new IndexOutOfBoundsException();
             }
         }

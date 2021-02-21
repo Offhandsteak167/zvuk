@@ -17,6 +17,5 @@ public class ServerSetup {
         EchoServer thread = new EchoServer();
         thread.start();
         logger.addEvent(new Event("INFO","EchoSever is online."));
-
     }
 }

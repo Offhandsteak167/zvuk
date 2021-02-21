@@ -7,6 +7,7 @@ import main.shared.Account;
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
+import java.util.Arrays;
 
 /**
  *
@@ -46,7 +47,7 @@ public class Connect {
         {
             // if the error message is "out of memory",
             // it probably means no database file is found
-            System.err.println(e.getMessage());
+            ServerSetup.logger.addEvent(new Event("ERROR",e.getMessage()));
         }
         finally
         {
@@ -58,7 +59,7 @@ public class Connect {
             catch(SQLException e)
             {
                 // connection close failed.
-                System.err.println(e.getMessage());
+                ServerSetup.logger.addEvent(new Event("ERROR",e.getMessage()));
             }
         }
     }
@@ -92,7 +93,7 @@ public class Connect {
         {
             // if the error message is "out of memory",
             // it probably means no database file is found
-            System.err.println(e.getMessage());
+            ServerSetup.logger.addEvent(new Event("ERROR",e.getMessage()));
         }
         finally
         {
@@ -104,7 +105,7 @@ public class Connect {
             catch(SQLException e)
             {
                 // connection close failed.
-                System.err.println(e.getMessage());
+                ServerSetup.logger.addEvent(new Event("ERROR",e.getMessage()));
             }
         }
     }
@@ -115,7 +116,9 @@ public class Connect {
             System.out.println(temp);
             statement.executeUpdate(temp);
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            ServerSetup.logger.addEvent(new Event("ERROR", Arrays.toString(throwables.getStackTrace())));
+
+
         }
     }
 }
