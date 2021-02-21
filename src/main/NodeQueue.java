@@ -42,6 +42,22 @@ public class NodeQueue<T> implements Queue<T> {
         size--;
         return temp_val;
     }
+    public Node<T> getPlace(int i){
+        int z = 0;
+        Node<T> thing = front;
+        while (z < size){
+            if (i == z){
+                return thing;
+            }
+            if (thing.getNext() != null) {
+                thing = thing.getNext();
+                z++;
+            } else {
+                throw new IndexOutOfBoundsException();
+            }
+        }
+        return null;
+    }
 
     @Override
     public String toString() {
@@ -51,13 +67,4 @@ public class NodeQueue<T> implements Queue<T> {
                 '}';
     }
 
-    @Override
-    public boolean hasNext() {
-        return false;
-    }
-
-    @Override
-    public T next() {
-        return null;
-    }
 }

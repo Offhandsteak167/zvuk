@@ -4,9 +4,10 @@ import java.util.Date;
 
 public class Business extends Account {
     private Company company;
-    private boolean inMeeting;
-    private Date start;
+    public boolean inMeeting;
+    public Date start;
     private Customer customer;
+
     public Business(String fname, String lname, String email, String password, Company company) {
         super(fname, lname, email, password);
         this.company = company;

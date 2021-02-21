@@ -8,7 +8,7 @@ package main;
  * @author jwd2488
  * @section 6
  */
-public class Node<T> extends NodeIterator<T> {
+public class Node<T>  {
     private T value;
     private Node<T> next;
 

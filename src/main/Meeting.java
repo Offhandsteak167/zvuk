@@ -1,19 +1,16 @@
 package main;
 
 public class Meeting {
-    Account meetingCreator;
+    Customer meetingCreator;
     int waitTime;
 
-    public Meeting(Account meetingCreator){
+    public Meeting(Customer meetingCreator){
         this.meetingCreator = meetingCreator;
         waitTime = 0;
     }
 
     @Override
     public String toString() {
-        return "main.Meeting{" +
-                "meetingCreator=" + meetingCreator +
-                ", priority=" + waitTime +
-                '}';
+        return "Meeting with "+meetingCreator.getEmail();
     }
 }

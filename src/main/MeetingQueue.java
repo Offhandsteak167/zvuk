@@ -7,6 +7,10 @@ public class MeetingQueue{
     public Company company;
     public Account[] employees;
 
+    public MeetingQueue(){
+        queue = new NodeQueue<>();
+    }
+
     public NodeQueue<Meeting> getQueue() {
         return queue;
     }
@@ -14,11 +18,7 @@ public class MeetingQueue{
     public void addMeetingToQueue(Meeting meeting){
         queue.enqueue(meeting);
     }
-
-    public void removeMeetingFromQueue(Meeting meeting){
-        queue.remove();
-    }
-
+    /**
     public void queueLifeCycle(){
         for (NodeQueue<Meeting> it = queue; it.hasNext(); ) {
             Meeting item = it.next();
@@ -28,6 +28,7 @@ public class MeetingQueue{
             }
         }
     }
+     **/
 
     @Override
     public String toString() {

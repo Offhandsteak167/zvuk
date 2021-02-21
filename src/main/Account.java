@@ -15,4 +15,8 @@ public abstract class Account{
     public boolean logIn(String email, String password){
         return this.email.equals(email) && this.password.equals(password);
     }
+
+    public String getEmail() {
+        return email;
+    }
 }

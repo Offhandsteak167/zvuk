@@ -7,12 +7,14 @@ public class Company {
     private static int nextId = 1;
     public final int id;
     private String name;
+    private MeetingQueue queue;
 
     ArrayList<Business> employees = new ArrayList<>();
 
     public Company(String name) {
         this.name = name;
         this.id = nextId++;
+        this.queue = new MeetingQueue();
     }
     ArrayList<Interaction> currentInteractions = new ArrayList<>();
     ArrayList<Interaction> interactionHistory = new ArrayList<>();
@@ -31,6 +33,10 @@ public class Company {
         currentInteractions.remove(order);
         interactionHistory.add(order);
         }
+
+    public MeetingQueue getMeetingQueue(){
+        return queue;
+    }
 
     @Override
     public String toString(){ return this.name + " id:" + this.id; }

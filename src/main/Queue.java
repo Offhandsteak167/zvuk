@@ -2,7 +2,7 @@ package main;
 
 import java.util.Iterator;
 
-public interface Queue<T> extends Iterator<T> {
+public interface Queue<T> {
     int size();
     void enqueue(T value);
     T dequeue();
