@@ -1,25 +1,19 @@
 package main;
 
-import main.server.EchoServer;
 import main.util.Email;
 import main.data.AccountInformation;
-import main.dummy.DummyDatabase;
 import main.shared.Account;
 import main.shared.Company;
 import main.shared.Customer;
 import main.shared.Meeting;
 
-import java.io.File;
-import java.io.IOException;
-
 public class Main {
 
     public Account[] accounts = new Account[10];
 
-    public static void main(String[] args) throws IOException {
-        DummyDatabase.getContents(new File("test.wtdb"));
+    public static void main(String[] args) {
         AccountInformation jakeDownie = new AccountInformation("Jake","Downie","jwd2488@rit.edu","JakeShot");
-        //Email.send(jakeDownie.email());
+        Email.send(jakeDownie.email());
     }
 
     public static Company createTestCompany() {
