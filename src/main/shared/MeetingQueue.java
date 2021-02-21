@@ -1,4 +1,4 @@
-package main;
+package main.shared;
 
 import main.util.NodeQueue;
 
@@ -36,7 +36,7 @@ public class MeetingQueue implements Serializable {
 
     @Override
     public String toString() {
-        return "main.MeetingQueue{" +
+        return "main.shared.MeetingQueue{" +
                 "queue=" + queue.toString() +
                 ", company=" + company +
                 ", employees=" + Arrays.toString(employees) +

@@ -1,4 +1,4 @@
-package main;
+package main.shared;
 
 public class Meeting {
     final Customer meetingCreator;

@@ -2,10 +2,7 @@ package main.client;
 
 // A simple Client Server Protocol .. Client for Echo Server
 
-import main.Company;
-import main.Customer;
-import main.HandleCommands;
-import main.Interaction;
+import main.shared.HandleCommands;
 import main.server.Command;
 import main.server.Packet;
 

@@ -1,6 +1,5 @@
-package main;
+package main.shared;
 
-import main.Meeting;
 import main.data.AccountInformation;
 import main.server.Command;
 import main.server.Packet;

@@ -1,4 +1,4 @@
-package main;
+package main.shared;
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.Serializable;
