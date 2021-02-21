@@ -4,6 +4,12 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * Cryptic is used to encrypt and decrypt passwords so passwords are nt stored as pain text
+ * @author Jake D
+ * @author Patrick B
+ * @author Artie G
+ */
 public class cryptic {
     public static byte[] encrypt(String s, byte[] b){
         SecretKeySpec key = new SecretKeySpec(b, "AES");
