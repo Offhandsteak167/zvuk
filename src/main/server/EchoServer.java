@@ -10,10 +10,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
+/**
+ * Represents a server
+ *
+ * @author Jake D
+ */
 public class EchoServer extends Thread {
+
+    /**
+     * runs/starts the server
+     */
     public void run() {
-
-
         Socket s;
         ServerSocket ss2 = null;
         System.out.println("Server Listening......");
@@ -45,6 +52,9 @@ public class EchoServer extends Thread {
 
 }
 
+/**
+ * Thread for the server
+ */
 class ServerThread extends Thread {
 
     String line = null;
@@ -58,8 +68,7 @@ class ServerThread extends Thread {
 
     public void run() {
         try {
-            is = new BufferedReader(new InputStreamReader(s.getInputStream()));
-            os = new PrintWriter(s.getOutputStream());
+            createInputAndOutput();
 
         } catch (IOException e) {
             System.out.println("IO error in server thread");
@@ -69,14 +78,7 @@ class ServerThread extends Thread {
             line = is.readLine();
 
             while (line.compareTo("QUIT") != 0) {
-                os.println(line);
-                os.flush();
-                if (!line.equals(".")) {
-                    Packet p = (Packet) Packet.fromString(line);
-                    Packet response = new Packet(HandleCommands.handleCommand(p));
-                    System.out.println("Response to Client  :  " + line);
-                }
-                line = is.readLine();
+                handleInput();
             }
         } catch (IOException e) {
 
@@ -108,5 +110,21 @@ class ServerThread extends Thread {
                 System.out.println("Socket Close Error");
             }
         }//end finally
+    }
+
+    private void createInputAndOutput() throws IOException {
+        is = new BufferedReader(new InputStreamReader(s.getInputStream()));
+        os = new PrintWriter(s.getOutputStream());
+    }
+
+    private void handleInput() throws IOException, ClassNotFoundException {
+        os.println(line);
+        os.flush();
+        if (!line.equals(".")) {
+            Packet p = (Packet) Packet.fromString(line);
+            Packet response = new Packet(HandleCommands.handleCommand(p));
+            System.out.println("Response to Client  :  " + line);
+        }
+        line = is.readLine();
     }
 }
