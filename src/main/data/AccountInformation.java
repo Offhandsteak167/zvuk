@@ -1,6 +1,7 @@
 package main.data;
 
 import main.shared.Customer;
+import main.util.Email;
 
 import java.io.Serializable;
 
@@ -21,7 +22,9 @@ public class AccountInformation implements Serializable {
     }
 
     public Customer createCustomerAccount(){
-        return new Customer(fname,lname,email,password,address,payment);
+        Customer newCustomer = new Customer(fname,lname,email,password,address,payment);
+        //Email.send(newCustomer.getEmail()); <- possible issues depending on server
+        return newCustomer;
     }
 
     public void setPayment(String payment) {
