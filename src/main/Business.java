@@ -2,12 +2,30 @@ package main;
 
 import java.util.Date;
 
+/**
+ * Represents a Business Account, extends the
+ * abstract Account class. Contains methods to
+ * start and stop meetings.
+ *
+ * @author Jake D
+ * @author Patrick B
+ * @author Artie G
+ */
 public class Business extends Account {
-    private Company company;
+    private final Company company;
     public boolean inMeeting;
     public Date start;
     private Customer customer;
 
+    /**
+     * Constructor for a business account.
+     *
+     * @param fname The user's first name
+     * @param lname The user's last name
+     * @param email The user's email
+     * @param password The user's password
+     * @param company The user's company
+     */
     public Business(String fname, String lname, String email, String password, Company company) {
         super(fname, lname, email, password);
         this.company = company;

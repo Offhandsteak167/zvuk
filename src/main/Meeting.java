@@ -1,8 +1,8 @@
 package main;
 
 public class Meeting {
-    Customer meetingCreator;
-    int waitTime;
+    final Customer meetingCreator;
+    final int waitTime;
 
     public Meeting(Customer meetingCreator){
         this.meetingCreator = meetingCreator;

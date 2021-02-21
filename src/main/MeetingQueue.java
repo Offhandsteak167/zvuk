@@ -5,7 +5,7 @@ import main.util.NodeQueue;
 import java.util.Arrays;
 
 public class MeetingQueue{
-    public NodeQueue<Meeting> queue;
+    public final NodeQueue<Meeting> queue;
     public Company company;
     public Account[] employees;
 
@@ -20,6 +20,7 @@ public class MeetingQueue{
     public void addMeetingToQueue(Meeting meeting){
         queue.enqueue(meeting);
     }
+
     /**
     public void queueLifeCycle(){
         for (NodeQueue<Meeting> it = queue; it.hasNext(); ) {

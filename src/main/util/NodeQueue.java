@@ -18,14 +18,14 @@ public class NodeQueue<T> implements Queue<T> {
 
     @Override
     public void enqueue(T value){
-        Node<T> node = new Node<T>(value);
+        Node<T> node = new Node<>(value);
         if(back == null && front == null){
             front = node;
-            back = node;
         } else {
+            assert back != null;
             back.setNext(node);
-            back = node;
         }
+        back = node;
         size++;
     }
 
