@@ -4,14 +4,10 @@ const initUI = () => {
     const conferenceAliasInput = document.getElementById('alias-input');
     const leaveButton = document.getElementById('leave-btn');
     const lblDolbyVoice = document.getElementById('label-dolby-voice');
-    const startVideoBtn = document.getElementById('start-video-btn');
-    const stopVideoBtn = document.getElementById('stop-video-btn');
+
     const startAudioBtn = document.getElementById('start-audio-btn');
     const stopAudioBtn = document.getElementById('stop-audio-btn');
-    const startScreenShareBtn = document.getElementById('start-screenshare-btn');
-    const stopScreenShareBtn = document.getElementById('stop-screenshare-btn');
-    const startRecordingBtn = document.getElementById('start-recording-btn');
-    const stopRecordingBtn = document.getElementById('stop-recording-btn');
+
 
     // Update the login message with the name of the user
     nameMessage.innerHTML = `You are logged in as ${randomName}`;
@@ -85,27 +81,6 @@ const initUI = () => {
             })
             .catch((e) => console.log(e));
     };
-
-    startVideoBtn.onclick = () => {
-        // Start sharing the video with the other participants
-        VoxeetSDK.conference.startVideo(VoxeetSDK.session.participant)
-            .then(() => {
-                startVideoBtn.disabled = true;
-                stopVideoBtn.disabled = false;
-            })
-            .catch((e) => console.log(e));
-    };
-
-    stopVideoBtn.onclick = () => {
-        // Stop sharing the video with the other participants
-        VoxeetSDK.conference.stopVideo(VoxeetSDK.session.participant)
-            .then(() => {
-                stopVideoBtn.disabled = true;
-                startVideoBtn.disabled = false;
-            })
-            .catch((e) => console.log(e));
-    };
-
     startAudioBtn.onclick = () => {
         // Start sharing the Audio with the other participants
         VoxeetSDK.conference.startAudio(VoxeetSDK.session.participant)
@@ -125,82 +100,7 @@ const initUI = () => {
             })
             .catch((e) => console.log(e));
     };
-
-    startScreenShareBtn.onclick = () => {
-        // Start the Screen Sharing with the other participants
-        VoxeetSDK.conference.startScreenShare()
-            .then(() => {
-                startScreenShareBtn.disabled = true;
-                stopScreenShareBtn.disabled = false;
-            })
-            .catch((e) => console.log(e));
-    };
-
-    stopScreenShareBtn.onclick = () => {
-        // Stop the Screen Sharing
-        VoxeetSDK.conference.stopScreenShare()
-            .catch((e) => console.log(e));
-    };
-
-    startRecordingBtn.onclick = () => {
-        let recordStatus = document.getElementById('record-status');
-
-        // Start recording the conference
-        VoxeetSDK.recording.start()
-            .then(() => {
-                recordStatus.innerText = 'Recording...';
-                startRecordingBtn.disabled = true;
-                stopRecordingBtn.disabled = false;
-            })
-            .catch((e) => console.log(e));
-    };
-
-    stopRecordingBtn.onclick = () => {
-        let recordStatus = document.getElementById('record-status');
-
-        // Stop recording the conference
-        VoxeetSDK.recording.stop()
-            .then(() => {
-                recordStatus.innerText = '';
-                startRecordingBtn.disabled = false;
-                stopRecordingBtn.disabled = true;
-            })
-            .catch((e) => console.log(e));
-    };
-
 };
-
-// Add a video stream to the web page
-const addVideoNode = (participant, stream) => {
-    let videoNode = document.getElementById('video-' + participant.id);
-
-    if (!videoNode) {
-        videoNode = document.createElement('video');
-
-        videoNode.setAttribute('id', 'video-' + participant.id);
-        videoNode.setAttribute('height', 240);
-        videoNode.setAttribute('width', 320);
-        videoNode.setAttribute("playsinline", true);
-        videoNode.setAttribute("muted", true);
-        videoNode.setAttribute("autoplay", 'autoplay');
-        videoNode.style = 'background: gray;';
-
-        const videoContainer = document.getElementById('video-container');
-        videoContainer.appendChild(videoNode);
-    }
-
-    navigator.attachMediaStream(videoNode, stream);
-};
-
-// Remove the video streem from the web page
-const removeVideoNode = (participant) => {
-    let videoNode = document.getElementById('video-' + participant.id);
-
-    if (videoNode) {
-        videoNode.parentNode.removeChild(videoNode);
-    }
-};
-
 // Add a new participant to the list
 const addParticipantNode = (participant) => {
     // If the participant is the current session user, don't add himself to the list
@@ -223,34 +123,3 @@ const removeParticipantNode = (participant) => {
     }
 };
 
-// Add a screen share stream to the web page
-const addScreenShareNode = (stream) => {
-    let screenShareNode = document.getElementById('screenshare');
-
-    if (screenShareNode) {
-        return alert('There is already a participant sharing a screen!');
-    }
-
-    screenShareNode = document.createElement('video');
-    screenShareNode.setAttribute('id', 'screenshare');
-    screenShareNode.autoplay = 'autoplay';
-    navigator.attachMediaStream(screenShareNode, stream);
-
-    const screenShareContainer = document.getElementById('screenshare-container');
-    screenShareContainer.appendChild(screenShareNode);
-}
-
-// Remove the screen share stream from the web page
-const removeScreenShareNode = () => {
-    let screenShareNode = document.getElementById('screenshare');
-
-    if (screenShareNode) {
-        screenShareNode.parentNode.removeChild(screenShareNode);
-    }
-
-    const startScreenShareBtn = document.getElementById('start-screenshare-btn');
-    startScreenShareBtn.disabled = false;
-
-    const stopScreenShareBtn = document.getElementById('stop-screenshare-btn');
-    stopScreenShareBtn.disabled = true;
-}

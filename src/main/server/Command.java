@@ -7,7 +7,6 @@ public class Command implements Serializable {
     public String command;
     public Object object;
 
-
     public Command(String header, String command, Object object){
         this.header = header;
         this.command = command;

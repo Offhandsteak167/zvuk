@@ -44,12 +44,12 @@ public class Email {
         return message;
     }
 
-    public static void send(String userId) throws MessagingException, IOException, GeneralSecurityException {
-        Gmail service = CreateGmail.getInstance();
-        Message message = createMessageWithEmail(createEmail(userId));
-        message = service.users().messages().send("me", message).execute();
+    public static void send(String userId)  {
+        try {
+            Gmail service = CreateGmail.getInstance();
+            Message message = createMessageWithEmail(createEmail(userId));
+            message = service.users().messages().send("me", message).execute();
+        } catch(Exception ignored){}
 
     }
-
-
 }

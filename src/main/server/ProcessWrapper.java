@@ -12,4 +12,8 @@ public class ProcessWrapper {
     public long getTime() {
         return time;
     }
+
+    public void killProcess(){
+        this.process.destroy();
+    }
 }

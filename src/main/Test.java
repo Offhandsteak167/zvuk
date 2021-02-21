@@ -2,6 +2,9 @@ package main;
 import main.util.*;
 import main.shared.*;
 
+import javax.mail.MessagingException;
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,7 +15,7 @@ public class Test {
         Process p = NodeHandler.start();
         p.toString();
     }
-    public static void testCustomer(){
+    public static void testCustomer() throws GeneralSecurityException, IOException, MessagingException {
         Customer c = new Customer("a","b","c","password", "a","a");
         boolean t = c.logIn("c","password");
         System.out.println(t);
