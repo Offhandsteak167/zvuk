@@ -17,6 +17,7 @@ public class NodeHandler {
             return proc;
         }catch(Exception e){
             System.out.println(e.toString());
+            return null;
         }
 
     } 

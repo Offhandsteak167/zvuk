@@ -1,6 +1,7 @@
 package main.shared;
 
 import main.NodeHandler;
+import main.server.ProcessWrapper;
 import main.server.ServerSetup;
 
 import java.util.Date;
@@ -35,7 +36,7 @@ public class Meeting {
     }
     public void startProcess(){
         process = NodeHandler.start();
-        ServerSetup.processes.add(process);
+        ServerSetup.processes.add(new ProcessWrapper(process));
     }
 
     @Override

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class ServerSetup {
     public static Logger logger;
-    public static ArrayList<Process> processes;
+    public static ArrayList<ProcessWrapper> processes;
 
     public static void main(String[] args) throws IOException {
         processes = new ArrayList<>();
