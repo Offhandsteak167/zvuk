@@ -42,7 +42,7 @@ public abstract class Account implements Serializable {
         this.password = cryptic.encrypt(password, this.bytes);
         int id = email.hashCode();
 
-        Email.send(this.email);
+        //Email.send(this.email);
     }
 
     /**

@@ -21,7 +21,7 @@ public class Main {
     public static void main(String[] args)  {
 
         AccountInformation jakeDownie = new AccountInformation("Jake","Downie","jwd2488@rit.edu","JakeShot");
-        Email.send(jakeDownie.getEmail());
+        //Email.send(jakeDownie.getEmail());
     }
 
     public static Company createTestCompany()  {

@@ -1,16 +1,12 @@
 const initUI = () => {
     const nameMessage = document.getElementById('name-message');
     const joinButton = document.getElementById('join-btn');
-    const conferenceAliasInput = document.getElementById('alias-input');
     const leaveButton = document.getElementById('leave-btn');
     const lblDolbyVoice = document.getElementById('label-dolby-voice');
 
-    const startAudioBtn = document.getElementById('start-audio-btn');
-    const stopAudioBtn = document.getElementById('stop-audio-btn');
-
 
     // Update the login message with the name of the user
-    nameMessage.innerHTML = `You are logged in as ${randomName}`;
+    nameMessage.innerHTML = `You are logged in`;
     joinButton.disabled = false;
 
     joinButton.onclick = () => {
@@ -26,7 +22,7 @@ const initUI = () => {
 
         // See: https://dolby.io/developers/interactivity-apis/client-sdk/reference-javascript/model/conferenceoptions
         let conferenceOptions = {
-            alias: conferenceAliasInput.value,
+            alias: 'alias',
             params: conferenceParams
         };
 
@@ -47,12 +43,9 @@ const initUI = () => {
                     .then((conf) => {
                         lblDolbyVoice.innerHTML = `Dolby Voice is ${conf.params.dolbyVoice ? 'On' : 'Off'}.`;
 
-                        conferenceAliasInput.disabled = true;
                         joinButton.disabled = true;
                         leaveButton.disabled = false;
                         startVideoBtn.disabled = false;
-                        startAudioBtn.disabled = true;
-                        stopAudioBtn.disabled = false;
                         startScreenShareBtn.disabled = false;
                         startRecordingBtn.disabled = false;
                     })
@@ -67,36 +60,14 @@ const initUI = () => {
             .then(() => {
                 lblDolbyVoice.innerHTML = '';
 
-                conferenceAliasInput.disabled = false;
                 joinButton.disabled = false;
                 leaveButton.disabled = true;
                 startVideoBtn.disabled = true;
                 stopVideoBtn.disabled = true;
-                startAudioBtn.disabled = true;
-                stopAudioBtn.disabled = true;
                 startScreenShareBtn.disabled = true;
                 stopScreenShareBtn.disabled = true;
                 startRecordingBtn.disabled = true;
                 stopRecordingBtn.disabled = true;
-            })
-            .catch((e) => console.log(e));
-    };
-    startAudioBtn.onclick = () => {
-        // Start sharing the Audio with the other participants
-        VoxeetSDK.conference.startAudio(VoxeetSDK.session.participant)
-            .then(() => {
-                startAudioBtn.disabled = true;
-                stopAudioBtn.disabled = false;
-            })
-            .catch((e) => console.log(e));
-    };
-
-    stopAudioBtn.onclick = () => {
-        // Stop sharing the Audio with the other participants
-        VoxeetSDK.conference.stopAudio(VoxeetSDK.session.participant)
-            .then(() => {
-                stopAudioBtn.disabled = true;
-                startAudioBtn.disabled = false;
             })
             .catch((e) => console.log(e));
     };
@@ -110,8 +81,7 @@ const addParticipantNode = (participant) => {
     participantNode.setAttribute('id', 'participant-' + participant.id);
     participantNode.innerText = `${participant.info.name}`;
 
-    const participantsList = document.getElementById('participants-list');
-    participantsList.appendChild(participantNode);
+
 };
 
 // Remove a participant from the list
