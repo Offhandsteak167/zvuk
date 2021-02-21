@@ -20,6 +20,7 @@ public class BusinessLogin extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Login to Zvuk");
+        primaryStage.setAlwaysOnTop(true);
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();

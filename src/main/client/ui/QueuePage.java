@@ -22,6 +22,7 @@ public class QueuePage extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("List of Current Calls");
+        primaryStage.setAlwaysOnTop(true);
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();

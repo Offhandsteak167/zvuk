@@ -26,6 +26,7 @@ public class Directory extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Company Directory");
+        primaryStage.setAlwaysOnTop(true);
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();

@@ -19,6 +19,7 @@ public class LauncherPage extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Launcher Panel");
+        primaryStage.setAlwaysOnTop(true);
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();

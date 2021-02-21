@@ -22,6 +22,7 @@ public class SignUp extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Register to Zvuk");
+        primaryStage.setAlwaysOnTop(true);
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();

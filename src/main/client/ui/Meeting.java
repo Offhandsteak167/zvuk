@@ -22,6 +22,7 @@ public class Meeting extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Waiting Room");
+        primaryStage.setAlwaysOnTop(true);
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();
