@@ -1,6 +1,6 @@
 package main.data;
 
-import main.Customer;
+import main.shared.Customer;
 
 public class AccountInformation {
     private int id;

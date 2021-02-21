@@ -1,6 +1,10 @@
 package main;
 
 import main.data.AccountInformation;
+import main.shared.Account;
+import main.shared.Company;
+import main.shared.Customer;
+import main.shared.Meeting;
 
 public class Main {
 

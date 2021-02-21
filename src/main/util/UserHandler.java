@@ -1,6 +1,6 @@
 package main.util;
 
-import main.Customer;
+import main.shared.Customer;
 import main.data.AccountInformation;
 import java.io.*;
 import java.util.Base64;

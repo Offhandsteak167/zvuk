@@ -17,8 +17,11 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="javax.mail-1.6.2" level="project" />
     <orderEntry type="library" name="activation" level="project" />
     <orderEntry type="library" name="javafx-sdk-11.0" level="project" />
+    <orderEntry type="library" name="com.google.api-client:google-api-client:1.23.0" level="project" />
+    <orderEntry type="library" name="com.google.oauth-client:google-oauth-client-jetty:1.23.0" level="project" />
+    <orderEntry type="library" name="com.google.apis:google-api-services-gmail:v1-rev83-1.23.0" level="project" />
+    <orderEntry type="library" name="javax.mail-1.6.2" level="project" />
   </component>
 </module>

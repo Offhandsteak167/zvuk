@@ -1,7 +1,7 @@
 package main.server;
 
 // echo server
-import main.HandleCommands;
+import main.shared.HandleCommands;
 
 import java.io.BufferedReader;
 import java.io.IOException;
