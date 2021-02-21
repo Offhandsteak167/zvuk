@@ -3,12 +3,7 @@ package main.audio;
 import java.io.File;
 import java.io.IOException;
 
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.*;
 
 public class Microphone {
 
@@ -21,7 +16,7 @@ public class Microphone {
     /**
      * @param filename the name of the file that is going to be played
      */
-    public void playSound(String filename){
+    public void playSound(String filename) throws IOException, UnsupportedAudioFileException {
 
         String strFilename = filename;
 
@@ -32,12 +27,9 @@ public class Microphone {
             System.exit(1);
         }
 
-        try {
+
             audioStream = AudioSystem.getAudioInputStream(soundFile);
-        } catch (Exception e){
-            e.printStackTrace();
-            System.exit(1);
-        }
+
 
         audioFormat = audioStream.getFormat();
 
