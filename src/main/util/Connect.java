@@ -2,9 +2,9 @@ package main.util;
 
 import main.dummy.DummyDatabase;
 import main.server.Packet;
+import main.server.ServerSetup;
 import main.shared.Account;
 
-import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Arrays;
