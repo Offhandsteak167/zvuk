@@ -30,4 +30,5 @@ public class AccountInformation implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
+    public String getEmail() { return this.email;}
 }
