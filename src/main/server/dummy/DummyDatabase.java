@@ -1,10 +1,10 @@
-package main.dummy;
+package main.server.dummy;
 
 import main.shared.Account;
 import main.shared.Business;
 import main.shared.Company;
 import main.shared.Customer;
-import main.util.Logger;
+import main.util.logger.Logger;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

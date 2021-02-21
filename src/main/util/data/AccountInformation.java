@@ -1,7 +1,6 @@
-package main.data;
+package main.util.data;
 
 import main.shared.Customer;
-import main.util.Email;
 
 import java.io.Serializable;
 

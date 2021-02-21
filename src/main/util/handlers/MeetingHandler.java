@@ -1,4 +1,4 @@
-package main.util;
+package main.util.handlers;
 
 public class MeetingHandler extends Thread {
     private final String link;

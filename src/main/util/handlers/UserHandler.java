@@ -1,7 +1,8 @@
-package main.util;
+package main.util.handlers;
 
 import main.shared.Customer;
-import main.data.AccountInformation;
+import main.util.Connect;
+import main.util.data.AccountInformation;
 import java.io.*;
 import java.util.Base64;
 

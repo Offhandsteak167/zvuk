@@ -5,19 +5,28 @@ import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Cryptic is used to encrypt and decrypt passwords so passwords are nt stored as pain text
+ * Cryptic is used to encrypt and decrypt passwords so passwords are not stored as pain text
+ *
  * @author Jake D
  * @author Patrick B
  * @author Artie G
  */
 public class cryptic {
-    public static byte[] encrypt(String s, byte[] b){
+
+    /**
+     * encrypts a string with the provided byte key
+     *
+     * @param s the input string
+     * @param b the input byte key
+     * @return the encrypted string
+     */
+    public static byte[] encrypt(String s, byte[] b) {
         SecretKeySpec key = new SecretKeySpec(b, "AES");
         Cipher cipher;
         try {
             cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, key);
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             return new byte[0];
         }
@@ -25,17 +34,25 @@ public class cryptic {
         cipher.update(input);
         try {
             return cipher.doFinal();
-        }catch(Exception e){
+        } catch (Exception e) {
             return new byte[0];
         }
     }
-    public static String decrypt(byte[] p, byte[] b){
+
+    /**
+     * Decrypts the provided byte array
+     *
+     * @param p the input byte array to decrypt
+     * @param b the key to use
+     * @return the decrypted String
+     */
+    public static String decrypt(byte[] p, byte[] b) {
         SecretKeySpec key = new SecretKeySpec(b, "AES");
         Cipher cipher;
         try {
             cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(Cipher.DECRYPT_MODE, key);
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             return "";
         }
@@ -43,7 +60,7 @@ public class cryptic {
         try {
             byte[] decipheredText = cipher.doFinal();
             return new String(decipheredText, StandardCharsets.UTF_8);
-        }catch(Exception e){
+        } catch (Exception e) {
             return "";
         }
     }

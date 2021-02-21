@@ -1,4 +1,4 @@
-package main.util;
+package main.util.queue;
 
 import java.io.Serializable;
 
@@ -6,8 +6,7 @@ import java.io.Serializable;
  * Constructor for nodes.
  *
  * @param <T> the generic parameter
- * @author Jake Downie
- * @author jwd2488
+ * @author Jake D
  */
 public class Node<T> implements Serializable {
     private T value;
@@ -74,7 +73,7 @@ public class Node<T> implements Serializable {
      */
     @Override
     public String toString() {
-        String toReturn =  "node.main.util.Node{" +
+        String toReturn =  "node.main.util.queue.Node{" +
                 "value=" + value;
                 if(next != null) {
                     toReturn+=", next=" + next.toString();

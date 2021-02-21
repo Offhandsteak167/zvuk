@@ -1,14 +1,15 @@
 package main.util;
 
-import main.dummy.DummyDatabase;
+import main.server.dummy.DummyDatabase;
 import main.server.Packet;
 import main.shared.Account;
+import main.util.logger.Event;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.Arrays;
 
-import static main.dummy.DummyDatabase.logger;
+import static main.server.dummy.DummyDatabase.logger;
 
 /**
  *

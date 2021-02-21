@@ -1,23 +1,44 @@
-package main.util;
+package main.util.queue;
 
-import static main.dummy.DummyDatabase.logger;
+import main.util.logger.Event;
 
+import static main.server.dummy.DummyDatabase.logger;
+
+/**
+ * Represents a node-based queue.
+ *
+ * @param <T> the generic parameter
+ * @author Jake D
+ **/
 public class NodeQueue<T> implements Queue<T> {
     private int size;
     private Node<T> front;
     private Node<T> back;
 
+    /**
+     * Constructor for NodeQueue
+     */
     public NodeQueue(){
         front = null;
         back = null;
         size = 0;
     }
 
+    /**
+     * Gets the queue's size
+     *
+     * @return the size of the queue
+     */
     @Override
     public int size(){
         return size;
     }
 
+    /**
+     * enqueues an item into the queue
+     *
+     * @param value the item to enqueue
+     */
     @Override
     public void enqueue(T value){
         Node<T> node = new Node<>(value);
@@ -31,6 +52,12 @@ public class NodeQueue<T> implements Queue<T> {
         this.size++;
     }
 
+    /**
+     * Dequeues an item from the queue
+     *
+     * @return the dequeued item
+     * @throws IndexOutOfBoundsException when queue is empty
+     */
     @Override
     public T dequeue() throws IndexOutOfBoundsException{
         if (this.front == null){
@@ -45,6 +72,13 @@ public class NodeQueue<T> implements Queue<T> {
         this.size--;
         return temp_val;
     }
+
+    /**
+     * Gets the ith item of the Queue, does not dequeue
+     *
+     * @param i the item's index to get
+     * @return the item.
+     */
     public Node<T> getPlace(int i){
         int z = 0;
         Node<T> thing = front;
@@ -63,9 +97,14 @@ public class NodeQueue<T> implements Queue<T> {
         return null;
 }
 
+    /**
+     * Override for toString
+     *
+     * @return the newly created string
+     */
     @Override
     public String toString() {
-        String toreturn = "main.util.NodeQueue{" +
+        String toreturn = "main.util.queue.NodeQueue{" +
                 "size=" + size;
                 if(front != null) {
                     toreturn+=", items=" + front.toString();

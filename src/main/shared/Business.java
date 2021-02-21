@@ -40,6 +40,11 @@ public class Business extends Account {
         return this.inMeeting;
     }
 
+    /**
+     * Starts a meeting and associates the business account with that meeting
+     *
+     * @param m the meeting to start
+     */
     public void startMeeting(Meeting m){
         this.start = new Date(System.currentTimeMillis());
         this.inMeeting = true;
@@ -49,6 +54,12 @@ public class Business extends Account {
 
     }
 
+    /**
+     * Ends a meeting, making the business account available again
+     *
+     * @param rating the "rating" of the meeting
+     * @return the Interaction to store.
+     */
     public Interaction endMeeting(int rating){
         Interaction i = new Interaction(this.start,  rating,this.customer, this);
         this.inMeeting = false;

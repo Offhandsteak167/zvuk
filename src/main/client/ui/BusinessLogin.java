@@ -13,7 +13,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.dummy.DummyDatabase;
+import main.server.dummy.DummyDatabase;
 
 public class BusinessLogin extends Application {
 

@@ -1,4 +1,4 @@
-package main.util;
+package main.util.email;
 
 import com.google.api.client.util.Base64;
 import com.google.api.services.gmail.Gmail;
@@ -12,8 +12,6 @@ import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
-import main.util.CreateGmail;
 
 
 public class Email {

@@ -3,7 +3,7 @@ package main.client;
 import main.shared.HandleCommands;
 import main.server.Command;
 import main.server.Packet;
-import main.util.NodeQueue;
+import main.util.queue.NodeQueue;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -13,7 +13,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.dummy.DummyDatabase;
+import main.client.ui.servers.CustomerLoginServer;
+import main.server.dummy.DummyDatabase;
 
 public class CustomerLogin extends Application {
 
@@ -101,31 +102,11 @@ public class CustomerLogin extends Application {
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
         submitButton.setOnAction(event -> {
-            if (emailField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your email id");
-                return;
-            }
-            if (passwordField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
-                return;
-            }
-            for (int i = 0; i < DummyDatabase.accounts.size(); i++) {
-                if(DummyDatabase.accounts.get(i).getEmail().equals(emailField.getText())){
-                    if(DummyDatabase.accounts.get(i).logIn(emailField.getText(), passwordField.getText())){
-                        System.out.println("Login Successful");
-                        MyLauncher.session.setAccount(DummyDatabase.accounts.get(i));
-                        Stage stage = (Stage) submitButton.getScene().getWindow();
-                        stage.close();
-                        MyLauncher.launcher();
-                        showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Login Successful!", "Welcome " + emailField.getText());
-                    } else {
-                        showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Login Failed!", "Please try again!");
-                    }
-                }
-            }
-
+            CustomerLoginServer.customerLoginSubmit(gridPane, emailField, passwordField, submitButton);
         });
     }
+
+
 
     private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);

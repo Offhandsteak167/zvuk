@@ -1,4 +1,4 @@
-package main.util;
+package main.util.handlers;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 public class MessageHandlers {

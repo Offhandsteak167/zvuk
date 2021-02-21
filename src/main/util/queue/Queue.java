@@ -1,4 +1,4 @@
-package main.util;
+package main.util.queue;
 
 import java.io.Serializable;
 

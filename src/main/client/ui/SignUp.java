@@ -12,7 +12,7 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.client.NetworkClient;
-import main.data.AccountInformation;
+import main.util.data.AccountInformation;
 import main.server.Command;
 
 import java.io.IOException;

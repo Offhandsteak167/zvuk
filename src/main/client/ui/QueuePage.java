@@ -13,7 +13,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.Main;
-import main.dummy.DummyDatabase;
+import main.server.dummy.DummyDatabase;
 import main.shared.Meeting;
 import main.shared.MeetingQueue;
 

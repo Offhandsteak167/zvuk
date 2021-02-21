@@ -11,7 +11,7 @@ package main;
 //123
 
 
-import main.data.AccountInformation;
+import main.util.data.AccountInformation;
 import main.shared.Account;
 import main.shared.Company;
 

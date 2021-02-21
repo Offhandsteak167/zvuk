@@ -1,14 +1,13 @@
 package main.server;
 
-import main.dummy.DummyDatabase;
-import main.server.EchoServer;
-import main.util.Event;
+import main.server.dummy.DummyDatabase;
+import main.util.logger.Event;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static main.dummy.DummyDatabase.logger;
+import static main.server.dummy.DummyDatabase.logger;
 
 public class ServerSetup {
     public static ArrayList<ProcessWrapper> processes;

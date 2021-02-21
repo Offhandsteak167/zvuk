@@ -14,7 +14,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.dummy.DummyDatabase;
+import main.client.ui.servers.DirectoryServer;
+import main.server.dummy.DummyDatabase;
 import main.shared.Customer;
 import main.shared.Meeting;
 
@@ -105,34 +106,13 @@ public class Directory extends Application {
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
         submitButton.setOnAction(event -> {
-            if (nameField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your name");
-                return;
-            }
-
-            Meeting m = new Meeting(customer);
-            DummyDatabase.companies.get(
-                    Integer.parseInt(nameField.getText())
-            )
-                    .getMeetingQueue().addMeetingToQueue(m);
-            MyLauncher.session.account.setMeeting(m);
-            MyLauncher.session.account.currentMeeting.setMeetingCreator((Customer) MyLauncher.session.account);
-            System.out.println(DummyDatabase.companies.get(2).toString());
-            Stage stage = (Stage) submitButton.getScene().getWindow();
-            stage.close();
-            MyLauncher.launcher();
-            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Meeting queue successful!", "Please wait on the next page for your meeting to start.");
+            DirectoryServer.directoryButton(gridPane, nameField, submitButton, customer);
         });
     }
 
-    private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.initOwner(owner);
-        alert.show();
-    }
+
+
+
 
     public static void startUp() {
         launch();

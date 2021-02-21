@@ -13,7 +13,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.util.MeetingHandler;
+import main.client.ui.servers.MeetingServer;
+import main.util.handlers.MeetingHandler;
 import main.util.NodeHandler;
 
 public class Meeting extends Application {
@@ -117,15 +118,11 @@ public class Meeting extends Application {
 
         });
         leaveButton.setOnAction(event -> {
-
-            MyLauncher.session.account.currentMeeting.killProcess();
-            MyLauncher.session.account.setMeeting(null);
-            Stage stage = (Stage) submitButton.getScene().getWindow();
-            stage.close();
-            MyLauncher.launcher();
-            showAlert(gridPane.getScene().getWindow(), "Meeting left!","Goodbye!");
+            MeetingServer.leaveButton(gridPane, submitButton);
         });
     }
+
+
 
     private void showAlert(Window owner, String title, String message) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

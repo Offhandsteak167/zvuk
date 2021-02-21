@@ -1,6 +1,6 @@
 package main.shared;
 
-import main.util.NodeQueue;
+import main.util.queue.NodeQueue;
 
 import java.io.Serializable;
 import java.util.ArrayList;

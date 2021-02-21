@@ -1,4 +1,4 @@
-package main.util;
+package main.util.handlers;
 
 import java.awt.*;
 import java.net.URL;

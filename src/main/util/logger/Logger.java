@@ -1,4 +1,6 @@
-package main.util;
+package main.util.logger;
+
+import main.util.queue.NodeQueue;
 
 public class Logger {
 

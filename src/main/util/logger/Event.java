@@ -1,4 +1,4 @@
-package main.util;
+package main.util.logger;
 
 import java.util.Calendar;
 import java.util.Date;
