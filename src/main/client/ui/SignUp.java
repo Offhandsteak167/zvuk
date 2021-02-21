@@ -1,8 +1,6 @@
-package main.ui;
+package main.client.ui;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -13,6 +11,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.client.NetworkClient;
+import main.data.AccountInformation;
+import main.server.Command;
 
 public class SignUp extends Application {
 
@@ -122,6 +123,8 @@ public class SignUp extends Application {
                 showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
                 return;
             }
+            Command createAccount = new Command("create", "account",new AccountInformation(nameField.getText().split(" ")[0],nameField.getText().split(" ")[1],emailField.getText(),passwordField.getText()));
+            NetworkClient.setCurrentCommand(createAccount);
             showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
         });
     }
