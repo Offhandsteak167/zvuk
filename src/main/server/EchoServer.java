@@ -74,9 +74,11 @@ class ServerThread extends Thread{
             while(line.compareTo("QUIT")!=0){
                 os.println(line);
                 os.flush();
-                Packet p = (Packet) Packet.fromString(line);
-                Packet response = new Packet(HandleCommands.handleCommand(p));
-                System.out.println("Response to Client  :  "+response.toString());
+                if (!line.equals(".")) {
+                    Packet p = (Packet) Packet.fromString(line);
+                    Packet response = new Packet(HandleCommands.handleCommand(p));
+                    System.out.println("Response to Client  :  "+line);
+                }
                 line=is.readLine();
             }
         } catch (IOException e) {

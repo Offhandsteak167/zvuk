@@ -2,7 +2,9 @@ package main.data;
 
 import main.shared.Customer;
 
-public class AccountInformation {
+import java.io.Serializable;
+
+public class AccountInformation implements Serializable {
     private int id;
     private String fname;
     private String lname;

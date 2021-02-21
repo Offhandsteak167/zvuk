@@ -5,6 +5,7 @@ package main.client;
 import main.shared.HandleCommands;
 import main.server.Command;
 import main.server.Packet;
+import main.util.NodeQueue;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,13 +16,17 @@ import java.net.Socket;
 
 public class NetworkClient {
 
-    private static Command currentCommand = null;
+    private NodeQueue<Command> commands;
 
-    public static void setCurrentCommand(Command c) {
-        currentCommand = c;
+    public NetworkClient(){
+        commands = new NodeQueue<>();
     }
 
-    public static void main(String args[]) throws IOException{
+    public void addToCommands(Command c) {
+        commands.enqueue(c);
+    }
+
+    public void loop() throws IOException{
 
 
         InetAddress address=InetAddress.getLocalHost();
@@ -46,45 +51,32 @@ public class NetworkClient {
         System.out.println("Enter Data to echo Server ( Enter QUIT to end):");
 
         String response=null;
+
         communicate(s1, br, is, os);
 
     }
 
-    private static void communicate(Socket s1, BufferedReader br, BufferedReader is, PrintWriter os) throws IOException {
+    private void communicate(Socket s1, BufferedReader br, BufferedReader is, PrintWriter os) throws IOException {
         String line;
         String response;
-        try {
-            if ( currentCommand != null){
-                Packet p = new Packet(currentCommand);
-                currentCommand = null;
+        try (s1; br; is; os) {
+            if (commands.size() != 0) {
+                Packet p = new Packet(commands.dequeue());
                 line = Packet.toString(p);
-            } else {
-                line = ".";
-            }
-            while(line.compareTo("QUIT")!=0){
                 os.println(line);
                 os.flush();
-                response= is.readLine();
-                Packet p = (Packet) Packet.fromString(response);
-                currentCommand = HandleCommands.handleCommand(p);
-                System.out.println("Server Response : "+response);
-                line= br.readLine();
-
+                response = is.readLine();
+                if (!response.equals(".")) {
+                    Packet np = (Packet) Packet.fromString(response);
+                    HandleCommands.handleCommand(np);
+                    System.out.println("Server Response : " + response);
+                }
             }
-
-
-
-        }
-        catch(IOException | ClassNotFoundException e){
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
             System.out.println("Socket read Error");
-        }
-        finally{
+        } finally {
 
-            is.close();
-            os.close();
-            br.close();
-            s1.close();
             System.out.println("Connection Closed");
 
         }

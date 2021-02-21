@@ -11,9 +11,12 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.Main;
 import main.client.NetworkClient;
 import main.data.AccountInformation;
 import main.server.Command;
+
+import java.io.IOException;
 
 public class SignUp extends Application {
 
@@ -124,7 +127,13 @@ public class SignUp extends Application {
                 return;
             }
             Command createAccount = new Command("create", "account",new AccountInformation(nameField.getText().split(" ")[0],nameField.getText().split(" ")[1],emailField.getText(),passwordField.getText()));
-            NetworkClient.setCurrentCommand(createAccount);
+            NetworkClient c1 = new NetworkClient();
+            c1.addToCommands(createAccount);
+            try {
+                c1.loop();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
         });
     }
