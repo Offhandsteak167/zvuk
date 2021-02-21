@@ -1,5 +1,6 @@
 package main;
 
+import main.util.Email;
 import main.data.AccountInformation;
 import main.shared.Account;
 import main.shared.Company;
@@ -12,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         AccountInformation jakeDownie = new AccountInformation("Jake","Downie","jwd2488@rit.edu","JakeShot");
-       // Email.send(jakeDownie);
+        Email.send(jakeDownie.email());
     }
 
     public static Company createTestCompany() {
