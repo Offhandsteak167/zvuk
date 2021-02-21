@@ -14,8 +14,8 @@ public class Company {
         this.name = name;
         this.id = nextId++;
     }
-    ArrayList<Interaction> currentOrders = new ArrayList<Interaction>();
-    ArrayList<Interaction> orderHistory = new ArrayList<Interaction>();
+    ArrayList<Interaction> currentInteractions = new ArrayList<>();
+    ArrayList<Interaction> interactionHistory = new ArrayList<>();
 
     public int getId(){ return this.id; }
     public ArrayList<Business> getEmployees() { return this.employees; }
@@ -26,10 +26,10 @@ public class Company {
     public void setName(String newName) { this.name = newName; }
     public String getName() { return this.name; }
 
-    void addOrder(Interaction order) {currentOrders.add(order);}
+    void addOrder(Interaction order) {currentInteractions.add(order);}
     void closeOrder(Interaction order) {
-        currentOrders.remove(order);
-        orderHistory.add(order);
+        currentInteractions.remove(order);
+        interactionHistory.add(order);
         }
 
     @Override
