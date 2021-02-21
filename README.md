@@ -2,6 +2,17 @@
 
 ZVUK is a Java VOIP solution for small businesses. 
 
+## Features
+Integration with google email services for rapid and customized emails to users. 
+Voxeet integration to handle VOIP.
+Scalable strucutre, easy to add new features and implementations. 
+Well documented and tested. 
+Server to Multiple Clients Communication with custom Packet object and Command object. 
+AES encryption for account passwords.
+Comprehensive custom logging program.
+
+
+
 ## Installation
 
 Most libraries are included, use node and maven to install the rest. 
