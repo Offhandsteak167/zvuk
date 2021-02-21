@@ -31,7 +31,7 @@ public abstract class Account implements Serializable {
         this.email = email;
         this.bytes = new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09,
                 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
-        cryptic.encrypt(password, this.bytes);
+        this.password = cryptic.encrypt(password, this.bytes);
         int id = email.hashCode();
     }
 
@@ -44,6 +44,8 @@ public abstract class Account implements Serializable {
      * @return true or false regarding whether the login was successful
      */
     public boolean logIn(String email, String password){
+        System.out.println(email);
+        System.out.println(this.password);
         String pswd = cryptic.decrypt(this.password, this.bytes);
         return this.email.equals(email) && pswd.equals(password);
     }

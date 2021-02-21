@@ -11,14 +11,23 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.dummy.DummyDatabase;
+import main.shared.Company;
+import main.shared.Customer;
+import main.shared.Meeting;
+
+import java.util.List;
 
 public class Directory extends Application {
 
+    private static Customer customer;
+
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Register to Zvuk");
+        primaryStage.setTitle("Company Directory");
 
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();
@@ -30,6 +39,7 @@ public class Directory extends Application {
         primaryStage.setScene(scene);
 
         primaryStage.show();
+
     }
 
 
@@ -73,32 +83,20 @@ public class Directory extends Application {
         GridPane.setMargin(headerLabel, new Insets(20, 0,20,0));
 
         // Add Name Label
-        Label nameLabel = new Label("Full Name : ");
-        gridPane.add(nameLabel, 0,1);
+        Label nameLabel = new Label("Company Name : ");
+        gridPane.add(nameLabel, 0,0);
 
         // Add Name Text Field
         TextField nameField = new TextField();
         nameField.setPrefHeight(40);
-        gridPane.add(nameField, 1,1);
+        gridPane.add(nameField, 1,0);
 
 
-        // Add Email Label
-        Label emailLabel = new Label("Email ID : ");
-        gridPane.add(emailLabel, 0, 2);
-
-        // Add Email Text Field
-        TextField emailField = new TextField();
-        emailField.setPrefHeight(40);
-        gridPane.add(emailField, 1, 2);
-
-        // Add Password Label
-        Label passwordLabel = new Label("Password : ");
-        gridPane.add(passwordLabel, 0, 3);
-
-        // Add Password Field
-        PasswordField passwordField = new PasswordField();
-        passwordField.setPrefHeight(40);
-        gridPane.add(passwordField, 1, 3);
+        StringBuilder itemText = new StringBuilder();
+        for (int i = 0; i < DummyDatabase.companies.size(); i++) {
+            itemText.append(DummyDatabase.companies.get(i)).append("\n");
+        }
+        gridPane.add(new Text(itemText.toString()), 1, 2);
 
         // Add Submit Button
         Button submitButton = new Button("Submit");
@@ -114,14 +112,8 @@ public class Directory extends Application {
                 showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your name");
                 return;
             }
-            if (emailField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter your email id");
-                return;
-            }
-            if (passwordField.getText().isEmpty()) {
-                showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
-                return;
-            }
+
+            DummyDatabase.companies.get(Integer.parseInt(nameField.getText())).getMeetingQueue().addMeetingToQueue(new Meeting(customer));
 
             showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
         });
@@ -136,7 +128,8 @@ public class Directory extends Application {
         alert.show();
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    public static void startUp(Customer c) {
+        customer = c;
+        launch(new String[0]);
     }
 }

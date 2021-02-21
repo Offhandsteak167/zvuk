@@ -2,6 +2,7 @@ package main.dummy;
 
 import main.shared.Account;
 import main.shared.Company;
+import main.shared.Customer;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,8 +15,20 @@ import java.util.ArrayList;
 
 public class DummyDatabase {
 
-    public static ArrayList<Account> accounts = new ArrayList<>();
-    public static ArrayList<Company> companies = new ArrayList<>();
+    public static ArrayList<Account> accounts = new ArrayList<>()
+    {
+        {
+            add(new Customer("Jake","Downie","jakedownie8@gmail.com","123","78 Battin","Plan 1"));
+        }
+    };
+    public static ArrayList<Company> companies = new ArrayList<>()
+    {
+        {
+            add(new Company("Joe's Subs"));
+            add(new Company("Pa's Pizza Parlor"));
+            add(new Company("Ritchie's Bricks"));
+        }
+    };
 
     public static String mime = "wtdb";
 

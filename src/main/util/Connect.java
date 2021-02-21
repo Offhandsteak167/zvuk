@@ -1,6 +1,8 @@
 package main.util;
 
 import main.dummy.DummyDatabase;
+import main.server.Packet;
+import main.shared.Account;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,16 +14,22 @@ import java.sql.*;
  */
 public class Connect {
 
-    public static boolean does_account_exist(String input) throws IOException {
-        return DummyDatabase.containsObject(new File("test.wtdb"),input);
+    public static boolean does_account_exist(String input) throws IOException, ClassNotFoundException {
+        return DummyDatabase.accounts.contains(Packet.fromString(input));
+        //return DummyDatabase.containsObject(new File("test.wtdb"),input);
     }
 
-    public static void  insert_new_account(String input) throws IOException {
+    public static void  insert_new_account(String input) throws IOException, ClassNotFoundException {
+        DummyDatabase.accounts.add((Account) Packet.fromString(input));
+        /**
+        DummyDatabase.addObject(new File("test.wtdb"), input);
         if (!does_account_exist(input)) {
+            DummyDatabase.accounts.add((Account) Packet.fromString(input));
             DummyDatabase.addObject(new File("test.wtdb"), input);
         } else {
             throw new IOException("Account already exists!");
         }
+         **/
 
         //TODO: CHECK IF USER ALREADY EXISTS AND RETURN STATE
         Connection connection = null;

@@ -131,10 +131,13 @@ public class SignUp extends Application {
             c1.addToCommands(createAccount);
             try {
                 c1.loop();
+                showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
+                Stage stage = (Stage) submitButton.getScene().getWindow();
+                stage.close();
             } catch (IOException e) {
                 e.printStackTrace();
+                showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration failed!", "Please try again!");
             }
-            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + nameField.getText());
         });
     }
 

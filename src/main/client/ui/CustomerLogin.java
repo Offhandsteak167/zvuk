@@ -13,6 +13,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import main.dummy.DummyDatabase;
+import main.shared.Customer;
 
 public class CustomerLogin extends Application {
 
@@ -66,7 +68,7 @@ public class CustomerLogin extends Application {
 
     private void addUIControls(GridPane gridPane) {
         // Add Header
-        Label headerLabel = new Label("Registration Form");
+        Label headerLabel = new Label("Customer Login Form");
         headerLabel.setFont(Font.font("Arial", FontWeight.BOLD, 24));
         gridPane.add(headerLabel, 0,0,2,1);
         GridPane.setHalignment(headerLabel, HPos.CENTER);
@@ -108,8 +110,19 @@ public class CustomerLogin extends Application {
                 showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
                 return;
             }
+            for (int i = 0; i < DummyDatabase.accounts.size(); i++) {
+                if(DummyDatabase.accounts.get(i).getEmail().equals(emailField.getText())){
+                    if(DummyDatabase.accounts.get(i).logIn(emailField.getText(), passwordField.getText())){
+                        System.out.println("Login Successful");
+                        Stage stage = (Stage) submitButton.getScene().getWindow();
+                        stage.close();
+                        Directory.startUp((Customer) DummyDatabase.accounts.get(i));
+                        showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Login Successful!", "Welcome " + emailField.getText());
+                    }
+                    showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Login Failed!", "Please try again!");
+                }
+            }
 
-            showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Registration Successful!", "Welcome " + emailField.getText());
         });
     }
 

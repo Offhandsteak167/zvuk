@@ -27,7 +27,7 @@ public class UserHandler {
         return Base64.getEncoder().encodeToString(baos.toByteArray());
     }
 
-    public void AddCustomerToDB(AccountInformation customer_info) throws IOException {
+    public void AddCustomerToDB(AccountInformation customer_info) throws IOException, ClassNotFoundException {
         Customer customer = customer_info.createCustomerAccount();
         var userDataString = toString(customer);
         Connect.insert_new_account(userDataString);

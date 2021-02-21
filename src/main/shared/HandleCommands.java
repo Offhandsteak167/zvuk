@@ -41,7 +41,8 @@ public class HandleCommands {
             return new Command("display_position", String.valueOf(position));
         } else if (c.header.equals("display_position")){
             MessageHandlers.sendAlert("You are currently in position "+c.command);
+            return null;
         }
-        return new Command("test","test");
+        return null;
     }
 }
