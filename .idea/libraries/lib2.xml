@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/httpclient-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-oauth-client-java6-1.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/guava-jdk5-17.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-api-services-gmail-v1-rev83-1.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api-2.5-20081211.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-6.1.26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-http-client-1.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-http-client-jackson2-1.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsr305-1.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-api-client-1.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-oauth-client-jetty-1.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-oauth-client-1.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jetty-util-6.1.26.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

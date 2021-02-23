@@ -25,7 +25,7 @@ Most libraries are included, use node and maven to install the rest.
 
 ```bash
 npm install
-npm install live-server
+npm install live-main.com.zvuk.java.server
 ```
 
 ## Usage
