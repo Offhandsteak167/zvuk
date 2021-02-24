@@ -1,6 +1,8 @@
 package main.com.zvuk.java.server;
 
+import main.com.zvuk.java.server.dummy.DummyDatabase;
 import main.com.zvuk.java.shared.HandleCommands;
+import main.com.zvuk.java.util.logger.Event;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Arrays;
 
 
 /**
@@ -23,28 +26,26 @@ public class EchoServer extends Thread {
     public void run() {
         Socket s;
         ServerSocket ss2 = null;
-        System.out.println("Server Listening......");
+        DummyDatabase.logger.addEvent(new Event("INFO","Server Listening......"));
         try {
             ss2 = new ServerSocket(4445); // can also use static final PORT_NUM , when defined
 
         } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Server error");
-
+            DummyDatabase.logger.addEvent(new Event("ERROR","Server Error"));
+            DummyDatabase.logger.addEvent(new Event("ERROR", Arrays.toString(e.getStackTrace())));
         }
 
         while (true) {
             try {
                 assert ss2 != null;
                 s = ss2.accept();
-                System.out.println("connection Established");
+                DummyDatabase.logger.addEvent(new Event("INFO","Connection Established"));
                 ServerThread st = new ServerThread(s);
                 st.start();
 
             } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("Connection Error");
-
+                DummyDatabase.logger.addEvent(new Event("ERROR","Connection Error"));
+                DummyDatabase.logger.addEvent(new Event("ERROR", Arrays.toString(e.getStackTrace())));
             }
         }
 
@@ -71,7 +72,8 @@ class ServerThread extends Thread {
             createInputAndOutput();
 
         } catch (IOException e) {
-            System.out.println("IO error in main.com.zvuk.java.server thread");
+            DummyDatabase.logger.addEvent(new Event("ERROR", "IO error in main.com.zvuk.java.server thread"));
+            DummyDatabase.logger.addEvent(new Event("ERROR", Arrays.toString(e.getStackTrace())));
         }
 
         try {
@@ -83,31 +85,32 @@ class ServerThread extends Thread {
         } catch (IOException e) {
 
             line = this.getName(); //reused String line for getting thread name
-            System.out.println("IO Error/ Client " + line + " terminated abruptly");
+            DummyDatabase.logger.addEvent(new Event("WARN", "IO Error/ Client " + line + " terminated abruptly"));
         } catch (NullPointerException e) {
             line = this.getName(); //reused String line for getting thread name
-            System.out.println("Client " + line + " Closed");
+            DummyDatabase.logger.addEvent(new Event("WARN", "Client " + line + " Closed"));
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            DummyDatabase.logger.addEvent(new Event("ERROR", "ClassNotFoundException"));
+            DummyDatabase.logger.addEvent(new Event("ERROR", Arrays.toString(e.getStackTrace())));
         } finally {
             try {
-                System.out.println("Connection Closing..");
+                DummyDatabase.logger.addEvent(new Event("INFO","Connection Closing.."));
                 if (is != null) {
                     is.close();
-                    System.out.println(" Socket Input Stream Closed");
+                    DummyDatabase.logger.addEvent(new Event("INFO","Socket Input Stream Closed"));
                 }
 
                 if (os != null) {
                     os.close();
-                    System.out.println("Socket Out Closed");
+                    DummyDatabase.logger.addEvent(new Event("INFO","Socket Out Closed"));
                 }
                 if (s != null) {
                     s.close();
-                    System.out.println("Socket Closed");
+                    DummyDatabase.logger.addEvent(new Event("INFO","Socket Closed"));
                 }
 
             } catch (IOException ie) {
-                System.out.println("Socket Close Error");
+                DummyDatabase.logger.addEvent(new Event("ERROR","Socket Error"));
             }
         }//end finally
     }
@@ -123,7 +126,8 @@ class ServerThread extends Thread {
         if (!line.equals(".")) {
             Packet p = (Packet) Packet.fromString(line);
             Packet response = new Packet(HandleCommands.handleCommand(p));
-            System.out.println("Response to Client  :  " + line);
+            DummyDatabase.logger.addEvent(new Event("INFO",("Response to Client  :  " + line)));
+
         }
         line = is.readLine();
     }

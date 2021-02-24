@@ -5,6 +5,7 @@ import main.com.zvuk.java.shared.Account;
 import main.com.zvuk.java.shared.Business;
 import main.com.zvuk.java.shared.Company;
 import main.com.zvuk.java.shared.Customer;
+import main.com.zvuk.java.util.logger.Event;
 import main.com.zvuk.java.util.logger.Logger;
 
 import java.io.BufferedReader;
@@ -131,7 +132,8 @@ public class DummyDatabase {
                 }
                 br.close();
             } catch (IOException e){
-                System.out.println("DOH!");
+                DummyDatabase.logger.addEvent(new Event("WARN","Unable to connect to database!"));
+
             }
         }
     }

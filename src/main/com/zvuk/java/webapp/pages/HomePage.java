@@ -18,14 +18,9 @@ public class HomePage extends WebPage {
         addElement((new ParagrahElement(new WebContent("Hello world!"))));
         addElement((new BoldElement(new WebContent("Cool elements!"),new WebAttribute(new Hashtable<>()))));
         addElement((new DivElement()));
-        System.out.println(getElement(2).toString());
         ((DivElement) getElement(2)).addSubElement((new ParagrahElement(new WebContent("This is structured!"))));
         ((DivElement) getElement(2)).addSubElement((new ParagrahElement(new WebContent("This is structured too!"))));
-        addElement((new ParagrahElement(new WebContent(DummyDatabase.companies.get(2).getName()))));
-        addElement((new ParagrahElement(new WebContent(DummyDatabase.companies.get(0).getMeetingQueue().toString()))));
-
-
-
+        addElement((new ParagrahElement(new WebContent("Company Name: "+DummyDatabase.companies.get(2).getName()))));
 
     }
 

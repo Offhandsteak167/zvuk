@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="loading entire html documents for templates">
+    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="pulling information from server and server setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/ServerSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/ServerSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/EchoServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/dummy/DummyDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/dummy/DummyDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ServerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/pages/HomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +73,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.ServerController">
+    <configuration name="MyLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.client.ui.MyLauncher" />
+      <module name="zvuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.com.zvuk.java.client.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServerController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.webapp.ServerController" />
       <module name="zvuk" />
@@ -96,6 +109,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ServerController" />
+        <item itemvalue="Application.MyLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614188205525</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pulling information from server and server setup">
+      <created>1614188615656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614188615656</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,7 +170,8 @@
     <MESSAGE value="basic web server" />
     <MESSAGE value="parser work" />
     <MESSAGE value="loading entire html documents for templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="loading entire html documents for templates" />
+    <MESSAGE value="pulling information from server and server setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulling information from server and server setup" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
