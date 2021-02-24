@@ -59,16 +59,7 @@ public class NetworkClient {
         String response;
         try (s1; br; is; os) {
             if (commands.size() != 0) {
-                Packet p = new Packet(commands.dequeue());
-                line = Packet.toString(p);
-                os.println(line);
-                os.flush();
-                response = is.readLine();
-                if (!response.equals(".")) {
-                    Packet np = (Packet) Packet.fromString(response);
-                    HandleCommands.handleCommand(np);
-                    System.out.println("Server Response : " + response);
-                }
+                createPacketAndReadResponse(is, os);
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -77,6 +68,21 @@ public class NetworkClient {
 
             System.out.println("Connection Closed");
 
+        }
+    }
+
+    private void createPacketAndReadResponse(BufferedReader is, PrintWriter os) throws IOException, ClassNotFoundException {
+        String line;
+        String response;
+        Packet p = new Packet(commands.dequeue());
+        line = Packet.toString(p);
+        os.println(line);
+        os.flush();
+        response = is.readLine();
+        if (!response.equals(".")) {
+            Packet np = (Packet) Packet.fromString(response);
+            HandleCommands.handleCommand(np);
+            System.out.println("Server Response : " + response);
         }
     }
 }

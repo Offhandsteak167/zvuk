@@ -14,13 +14,13 @@ public class ServerController {
 
     public static void main(String[] args) throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8030), 0);
-        server.createContext("/test", new MyHandler());
+        server.createContext("/", new IndexHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
         ServerSetup.start();
     }
 
-    static class MyHandler implements HttpHandler {
+    static class IndexHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange t) throws IOException {
             String response = new HomePage().toString();

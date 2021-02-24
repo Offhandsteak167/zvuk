@@ -45,10 +45,6 @@ public class Packet implements Serializable {
         return Base64.getEncoder().encodeToString(baos.toByteArray());
     }
 
-    void encode(Object data) throws IOException {
-        buf = toString((Serializable) data);
-    }
-
     public Object decode() throws IOException, ClassNotFoundException {
         return fromString(buf);
     }

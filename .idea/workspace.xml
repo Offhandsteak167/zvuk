@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="pulling information from server and server setup">
+    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="loggers">
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/server/PacketTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/data/AccountInformationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/email/CreateGmailTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/email/EmailTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/LinkHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/MeetingHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/MessageHandlersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/UserHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/logger/EventTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/ServerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebAttributeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebContentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebElementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/parser/HTMLParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/EchoServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/dummy/DummyDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/dummy/DummyDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/NetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/NetworkClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/Packet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zvuk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zvuk.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +36,7 @@
       <list>
         <option value="HTML File" />
         <option value="Class" />
+        <option value="JUnit4 &amp; Mockito" />
       </list>
     </option>
   </component>
@@ -60,7 +75,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -72,20 +87,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ServerController">
-    <configuration name="MyLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.client.ui.MyLauncher" />
-      <module name="zvuk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.com.zvuk.java.client.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PacketTest">
     <configuration name="ServerController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.webapp.ServerController" />
       <module name="zvuk" />
@@ -106,10 +108,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PacketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zvuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.main.com.zvuk.java.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.main.com.zvuk.java.server" />
+      <option name="MAIN_CLASS_NAME" value="test.main.com.zvuk.java.server.PacketTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PacketTest.testDecode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zvuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.main.com.zvuk.java.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.main.com.zvuk.java.server" />
+      <option name="MAIN_CLASS_NAME" value="test.main.com.zvuk.java.server.PacketTest" />
+      <option name="METHOD_NAME" value="testDecode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PacketTest.testFromString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zvuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.main.com.zvuk.java.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.main.com.zvuk.java.server" />
+      <option name="MAIN_CLASS_NAME" value="test.main.com.zvuk.java.server.PacketTest" />
+      <option name="METHOD_NAME" value="testFromString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PacketTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zvuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.main.com.zvuk.java.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.main.com.zvuk.java.server" />
+      <option name="MAIN_CLASS_NAME" value="test.main.com.zvuk.java.server.PacketTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PacketTest" />
+        <item itemvalue="JUnit.PacketTest.testDecode" />
+        <item itemvalue="JUnit.PacketTest.testFromString" />
+        <item itemvalue="JUnit.PacketTest.testToString" />
         <item itemvalue="Application.ServerController" />
-        <item itemvalue="Application.MyLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614188615656</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="loggers">
+      <created>1614190267612</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614190267612</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,7 +246,8 @@
     <MESSAGE value="parser work" />
     <MESSAGE value="loading entire html documents for templates" />
     <MESSAGE value="pulling information from server and server setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="pulling information from server and server setup" />
+    <MESSAGE value="loggers" />
+    <option name="LAST_COMMIT_MESSAGE" value="loggers" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
