@@ -5,6 +5,7 @@ import main.com.zvuk.java.webapp.WebPage;
 import main.com.zvuk.java.webapp.elements.BoldElement;
 import main.com.zvuk.java.webapp.elements.DivElement;
 import main.com.zvuk.java.webapp.elements.ParagrahElement;
+import main.com.zvuk.java.webapp.elements.StaticElement;
 import main.com.zvuk.java.webapp.parser.HTMLParser;
 
 import java.io.IOException;
@@ -19,12 +20,10 @@ public class HomePage extends WebPage {
         System.out.println(getElement(2).toString());
         ((DivElement) getElement(2)).addSubElement((new ParagrahElement(new WebContent("This is structured!"))));
         ((DivElement) getElement(2)).addSubElement((new ParagrahElement(new WebContent("This is structured too!"))));
-        ArrayList<String> strings;
+        String string;
         try {
-            strings = HTMLParser.parse();
-            for(String string : strings){
-                addElement(new ParagrahElement(new WebContent(string)));
-            }
+            string = HTMLParser.parse();
+            addElement(new StaticElement(new WebContent(string)));
         } catch (IOException e){
             System.out.println("Dang");
         }
