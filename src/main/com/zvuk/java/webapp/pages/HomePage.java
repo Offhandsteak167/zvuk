@@ -1,4 +1,5 @@
 package main.com.zvuk.java.webapp.pages;
+import main.com.zvuk.java.server.dummy.DummyDatabase;
 import main.com.zvuk.java.webapp.WebAttribute;
 import main.com.zvuk.java.webapp.WebContent;
 import main.com.zvuk.java.webapp.WebPage;
@@ -20,13 +21,9 @@ public class HomePage extends WebPage {
         System.out.println(getElement(2).toString());
         ((DivElement) getElement(2)).addSubElement((new ParagrahElement(new WebContent("This is structured!"))));
         ((DivElement) getElement(2)).addSubElement((new ParagrahElement(new WebContent("This is structured too!"))));
-        String string;
-        try {
-            string = HTMLParser.parse();
-            addElement(new StaticElement(new WebContent(string)));
-        } catch (IOException e){
-            System.out.println("Dang");
-        }
+        addElement((new ParagrahElement(new WebContent(DummyDatabase.companies.get(2).getName()))));
+        addElement((new ParagrahElement(new WebContent(DummyDatabase.companies.get(0).getMeetingQueue().toString()))));
+
 
 
 

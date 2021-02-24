@@ -12,7 +12,7 @@ import static main.com.zvuk.java.server.dummy.DummyDatabase.logger;
 public class ServerSetup {
     public static ArrayList<ProcessWrapper> processes;
 
-    public static void main(String[] args) throws IOException {
+    public static void start() throws IOException {
         logger.addEvent(new Event("INFO","Logger is online."));
 
         DummyDatabase.getContents(new File("test.wtdb"));

@@ -1,5 +1,6 @@
 package main.com.zvuk.java.server.dummy;
 
+import main.com.zvuk.java.server.ServerSetup;
 import main.com.zvuk.java.shared.Account;
 import main.com.zvuk.java.shared.Business;
 import main.com.zvuk.java.shared.Company;
@@ -118,17 +119,20 @@ public class DummyDatabase {
         }
     }
 
-    public static void getContents(File file) throws IOException
+    public static void getContents(File file)
     {
         ArrayList<String> contents = new ArrayList<>();
         if(file.getName().endsWith(mime))
         {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            while(br.ready())
-            {
-                contents.add(br.readLine());
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(file));
+                while (br.ready()) {
+                    contents.add(br.readLine());
+                }
+                br.close();
+            } catch (IOException e){
+                System.out.println("DOH!");
             }
-            br.close();
         }
     }
 }

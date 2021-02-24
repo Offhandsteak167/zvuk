@@ -11,6 +11,7 @@ public class Logger {
     }
 
     public void addEvent(Event e){
+        System.out.println(e.toString());
         events.enqueue(e);
     }
 
