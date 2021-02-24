@@ -9,4 +9,8 @@ public class WebAttribute {
     public WebAttribute(Hashtable<String, String> attributeDictionary) {
         this.attributeDictionary = attributeDictionary;
     }
+
+    public WebAttribute() {
+        this.attributeDictionary = new Hashtable<>();
+    }
 }
