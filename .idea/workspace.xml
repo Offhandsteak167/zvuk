@@ -5,235 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/zvuk.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/RequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/WebServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/SignUpServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/http/ContentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/http/HttpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/http/HttpResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/http/Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/http/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WebInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WelcomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zvuk.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_20_21,_6_39_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_20_21__6_39_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_springframework_spring_context_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_springframework_spring_web_5_2_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_springframework_spring_webmvc_4_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ParagrahElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/Servable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WebAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WebContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WebElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WebPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.base/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.base/ASSEMBLY_EXCEPTION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.base/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.controls/ASSEMBLY_EXCEPTION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.controls/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.fxml/ASSEMBLY_EXCEPTION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.fxml/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.graphics/ASSEMBLY_EXCEPTION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.graphics/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.graphics/jpeg_fx.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.media/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.media/ASSEMBLY_EXCEPTION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.media/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.media/applecoreaudio.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.media/glib.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.media/gstreamer.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.media/libffi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.swing/ASSEMBLY_EXCEPTION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.swing/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.web/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.web/ASSEMBLY_EXCEPTION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.web/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.web/icu_web.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.web/libxml2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.web/libxslt.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/legal/javafx.web/webkit.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx-swt.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.base.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.controls.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.fxml.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.graphics.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.media.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.swing.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/javafx.web.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libavplugin-54.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libavplugin-56.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libavplugin-57.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libavplugin-ffmpeg-56.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libavplugin-ffmpeg-57.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libdecora_sse.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libfxplugins.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libglass.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libglassgtk2.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libglassgtk3.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libgstreamer-lite.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libjavafx_font.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libjavafx_font_freetype.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libjavafx_font_pango.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libjavafx_iio.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libjfxmedia.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libjfxwebkit.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libprism_common.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libprism_es2.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/libprism_sw.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-sdk-11.0.2/lib/src.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Business.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Company.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Homepage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Meeting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/MeetingQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/MessageHandlers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/NodeIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/NodeQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/src/Queue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/identifier.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/libraries/activation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/libraries/com_google_api_client_google_api_client_1_23_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/libraries/com_google_apis_google_api_services_gmail_v1_rev83_1_23_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/libraries/com_google_oauth_client_google_oauth_client_jetty_1_23_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/libraries/javax_mail_1_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/https-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/https-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/localhost-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/config/localhost-key.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/localhost.pem" beforeDir="false" afterPath="$PROJECT_DIR$/config/localhost.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/commons-codec-1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/commons-codec-1.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/commons-logging-1.1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/commons-logging-1.1.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/google-api-client-1.23.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/google-api-client-1.23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/google-api-services-gmail-v1-rev83-1.23.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/google-api-services-gmail-v1-rev83-1.23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/google-http-client-1.23.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/google-http-client-1.23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/google-http-client-jackson2-1.23.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/google-http-client-jackson2-1.23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/google-oauth-client-1.23.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/google-oauth-client-1.23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/google-oauth-client-java6-1.23.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/google-oauth-client-java6-1.23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/google-oauth-client-jetty-1.23.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/google-oauth-client-jetty-1.23.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/guava-jdk5-17.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/guava-jdk5-17.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/httpclient-4.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/httpclient-4.0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/httpcore-4.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/httpcore-4.0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jackson-core-2.1.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jackson-core-2.1.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jetty-6.1.26.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jetty-6.1.26.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jetty-util-6.1.26.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jetty-util-6.1.26.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/jsr305-1.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jsr305-1.3.9.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/servlet-api-2.5-20081211.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/servlet-api-2.5-20081211.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/audio/AudioStreamInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/audio/AudioStreamInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/audio/Microphone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/audio/Microphone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/NetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/NetworkClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/BusinessLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/BusinessLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/CustomerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/CustomerLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/LauncherPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/LauncherPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/Meeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/MyLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/MyLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/QueuePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/QueuePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/servers/BusinessLoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/BusinessLoginServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/servers/CustomerLoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/CustomerLoginServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/servers/DirectoryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/DirectoryServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/servers/LauncherPageServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/LauncherPageServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/servers/MeetingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/MeetingServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/servers/QueuePageServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/QueuePageServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/servers/SignUpServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/client/ui/util/Alert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/util/Alert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/credentials/credentials-2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/credentials/credentials-2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scripts/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/scripts/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scripts/ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/scripts/ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/CheckProcesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/CheckProcesses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/EchoServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/Packet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/ProcessWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/ProcessWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/ServerSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/ServerSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/StringPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/StringPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/dummy/DummyDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/dummy/DummyDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Business.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/HandleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/HandleCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Interaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Meeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/shared/MeetingQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/MeetingQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/Connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/JS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/JS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/NodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/NodeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/cryptic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/cryptic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/data/AccountInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/data/AccountInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/email/CreateGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/email/CreateGmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/email/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/email/Email.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/handlers/LinkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/handlers/LinkHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/handlers/MeetingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/handlers/MeetingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/handlers/MessageHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/handlers/MessageHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/handlers/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/handlers/UserHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/helper.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/helper.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/helper2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/helper2.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/logger/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/logger/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/logger/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/queue/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/queue/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/queue/NodeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/queue/NodeQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/queue/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/queue/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/.idea/libraries/activation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/.idea/libraries/com_google_api_client_google_api_client_1_23_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/.idea/libraries/com_google_apis_google_api_services_gmail_v1_rev83_1_23_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/.idea/libraries/com_google_oauth_client_google_oauth_client_jetty_1_23_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/.idea/libraries/javax_mail_1_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/commons-codec-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/commons-logging-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/google-api-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/google-api-services-gmail-v1-rev83-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/google-http-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/google-http-client-jackson2-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/google-oauth-client-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/google-oauth-client-java6-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/google-oauth-client-jetty-1.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/guava-jdk5-17.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/httpclient-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/httpcore-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/jackson-core-2.1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/jetty-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/jetty-util-6.1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/jsr305-1.3.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/lib/servlet-api-2.5-20081211.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/zvuk/zvuk.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.wtdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/zvuk.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/QueuePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/QueuePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/SpringConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WebInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zvuk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zvuk.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,6 +38,10 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1otwg9F5WthCDteSyj7T6TLoXgK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -256,11 +51,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javafx-sdk-11.0.2/lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -271,7 +71,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.WelcomeController">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.WebServer" />
       <module name="zvuk" />
@@ -279,6 +79,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WelcomeController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.webapp.WelcomeController" />
+      <module name="zvuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.com.zvuk.java.webapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WelcomeController" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -301,6 +119,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

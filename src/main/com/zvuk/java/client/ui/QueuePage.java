@@ -12,7 +12,6 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.com.zvuk.src.main.Main;
 import main.com.zvuk.java.server.dummy.DummyDatabase;
 import main.com.zvuk.java.shared.Meeting;
 import main.com.zvuk.java.shared.MeetingQueue;
@@ -27,7 +26,7 @@ public class QueuePage extends Application {
         // Create the registration form grid pane
         GridPane gridPane = createRegistrationFormPane();
         // Add UI controls to the registration form grid pane
-        addUIControls(gridPane, Main.createTestCompany().getMeetingQueue());
+        addUIControls(gridPane, DummyDatabase.companies.get(0).getMeetingQueue());
         // Create a scene with registration form grid pane as the root node
         Scene scene = new Scene(gridPane, 800, 500);
         // Set the scene in primary stage

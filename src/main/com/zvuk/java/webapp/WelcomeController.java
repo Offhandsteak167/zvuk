@@ -1,29 +1,32 @@
 package main.com.zvuk.java.webapp;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
 
-import java.util.Date;
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+import main.com.zvuk.java.webapp.pages.HomePage;
 
-@Controller
 public class WelcomeController {
 
-    private final Logger logger = LoggerFactory.getLogger(WelcomeController.class);
-
-    @GetMapping("/")
-    public String index(Model model) {
-        logger.debug("Welcome to mkyong.com...");
-        model.addAttribute("msg", getMessage());
-        model.addAttribute("today", new Date());
-        return "index";
-
+    public static void main(String[] args) throws Exception {
+        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+        server.createContext("/test", new MyHandler());
+        server.setExecutor(null); // creates a default executor
+        server.start();
     }
 
-    private String getMessage() {
-        return "Hello World";
+    static class MyHandler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+            String response = new HomePage().toString();
+            t.sendResponseHeaders(200, response.length());
+            OutputStream os = t.getResponseBody();
+            os.write(response.getBytes());
+            os.close();
+        }
     }
 
 }
