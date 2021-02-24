@@ -1,9 +1,11 @@
 package main.com.zvuk.java.shared;
 import java.io.Serializable;
 import java.util.Arrays;
-import java.util.Date;
+import java.util.UUID;
 
+import main.com.zvuk.java.server.Database;
 import main.com.zvuk.java.util.cryptic;
+import org.zoodb.api.impl.ZooPC;
 
 /**
  * Abstractly represents an account,
@@ -13,18 +15,22 @@ import main.com.zvuk.java.util.cryptic;
  * @author Patrick B
  * @author Artie G
  */
-public abstract class Account implements Serializable {
+public abstract class Account extends ZooPC implements Serializable {
     private final String email;
-    private final byte[] bytes;
+    public static final byte[] bytes = new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09,
+            0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
     public boolean elevated = false;
     private final byte[] password;
     public Meeting currentMeeting;
 
     //New Migration Code.
-    private int user_id;
-    private int user_role_id;
+    private UUID user_id;
+    private Role user_role;
     private String user_name;
-    private Date user_dob;
+
+    public byte[] getPassword() {
+        return password;
+    }
 
     /**
      * Constructor for an Account, encrypts passwords based
@@ -36,10 +42,11 @@ public abstract class Account implements Serializable {
      * @param password The user's password
      */
     public Account(String fname, String lname, String email, String password)  {
+        this.user_name = fname+lname.split("")[0];
         this.email = email;
+        this.user_role = Database.defaultRole;
+        this.user_id = UUID.randomUUID();
         this.currentMeeting = null;
-        this.bytes = new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09,
-                0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f };
         this.password = cryptic.encrypt(password, this.bytes);
 
     }

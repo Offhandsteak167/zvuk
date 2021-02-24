@@ -19,8 +19,8 @@ public class MeetingQueue implements Serializable {
         return queue;
     }
 
-    public ArrayList<Customer> getMembers() {
-        ArrayList<Customer> toReturn = new ArrayList<>();
+    public ArrayList<Member> getMembers() {
+        ArrayList<Member> toReturn = new ArrayList<>();
         for (int i = 0; i < queue.size(); i++) {
             toReturn.add(queue.getPlace(i).getValue().meetingCreator);
         }

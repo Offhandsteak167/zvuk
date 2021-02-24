@@ -4,16 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="tests start">
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Channel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/ChatHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/RoleContainer.java" afterDir="false" />
+    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="starting implementation of chat application">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6820a55e-d1f5-4b67-aa53-4aff35033e17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdo_jdo_2_0_snapshot4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_xerial_sqlite_jdbc_3_34_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_zoodb_zoodb_0_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jdo-2.0-20050809.1515.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jdo-api-3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jta-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqlite-jdbc-3.34.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/transaction-api-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/zoodb-0.6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reload-schema.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup-database.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuvik.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zvuk.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/audio/AudioStreamInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/audio/AudioStreamInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/BusinessLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/BusinessLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/Directory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/QueuePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/QueuePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/CustomerLoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/CustomerLoginServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/DirectoryServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/ui/servers/DirectoryServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/EchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/ServerSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/ServerSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/dummy/DummyDatabase.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/HandleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/HandleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Interaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Interaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/MeetingQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/MeetingQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/util/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/util/data/AccountInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/data/AccountInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/util/handlers/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/handlers/UserHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/util/queue/NodeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/util/queue/NodeQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zvuk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zvuk.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +84,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -76,13 +111,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PacketTest">
-    <configuration name="ServerController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.webapp.ServerController" />
+  <component name="RunManager">
+    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.server.Database" />
       <module name="zvuk" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.com.zvuk.java.webapp.elements.*" />
+          <option name="PATTERN" value="main.com.zvuk.java.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,6 +128,19 @@
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.WebServer" />
       <module name="zvuk" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.com.zvuk.java.server.dummy.ZDB" />
+      <module name="zvuk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.com.zvuk.java.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,31 +192,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PacketTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="zvuk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.main.com.zvuk.java.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.main.com.zvuk.java.server" />
-      <option name="MAIN_CLASS_NAME" value="test.main.com.zvuk.java.server.PacketTest" />
-      <option name="METHOD_NAME" value="testToString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.PacketTest" />
-        <item itemvalue="JUnit.PacketTest.testDecode" />
-        <item itemvalue="JUnit.PacketTest.testFromString" />
-        <item itemvalue="JUnit.PacketTest.testToString" />
-        <item itemvalue="Application.ServerController" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -221,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614193911498</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="starting implementation of chat application">
+      <created>1614200731980</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614200731980</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +274,8 @@
     <MESSAGE value="pulling information from server and server setup" />
     <MESSAGE value="loggers" />
     <MESSAGE value="tests start" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests start" />
+    <MESSAGE value="starting implementation of chat application" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting implementation of chat application" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

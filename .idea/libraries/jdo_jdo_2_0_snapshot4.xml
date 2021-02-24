@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jdo:jdo:2.0-snapshot4" type="repository">
+    <properties maven-id="jdo:jdo:2.0-snapshot4" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jdo-2.0-20050809.1515.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

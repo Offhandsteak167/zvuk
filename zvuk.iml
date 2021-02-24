@@ -25,5 +25,8 @@
     <orderEntry type="library" name="log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="jsoup" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
+    <orderEntry type="library" name="jdo:jdo:2.0-snapshot4" level="project" />
+    <orderEntry type="library" name="org.zoodb:zoodb:0.6.0" level="project" />
+    <orderEntry type="library" name="org.xerial:sqlite-jdbc:3.34.0" level="project" />
   </component>
 </module>

@@ -1,6 +1,6 @@
 package main.com.zvuk.java.util.handlers;
 
-import main.com.zvuk.java.shared.Customer;
+import main.com.zvuk.java.shared.Member;
 import main.com.zvuk.java.util.Connect;
 import main.com.zvuk.java.util.data.AccountInformation;
 import java.io.*;
@@ -29,8 +29,8 @@ public class UserHandler {
     }
 
     public void AddCustomerToDB(AccountInformation customer_info) throws IOException, ClassNotFoundException {
-        Customer customer = customer_info.createCustomerAccount();
-        var userDataString = toString(customer);
+        Member member = customer_info.createCustomerAccount();
+        var userDataString = toString(member);
         Connect.insert_new_account(userDataString);
     }
 

@@ -14,12 +14,12 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import main.com.zvuk.java.client.ui.servers.DirectoryServer;
-import main.com.zvuk.java.server.dummy.DummyDatabase;
-import main.com.zvuk.java.shared.Customer;
+import main.com.zvuk.java.server.Database;
+import main.com.zvuk.java.shared.Member;
 
 public class Directory extends Application {
 
-    private static Customer customer;
+    private static Member member;
 
     @Override
     public void start(Stage primaryStage) {
@@ -90,8 +90,8 @@ public class Directory extends Application {
 
 
         StringBuilder itemText = new StringBuilder();
-        for (int i = 0; i < DummyDatabase.companies.size(); i++) {
-            itemText.append(DummyDatabase.companies.get(i)).append("\n");
+        for (int i = 0; i < Database.companies.size(); i++) {
+            itemText.append(Database.companies.get(i)).append("\n");
         }
         gridPane.add(new Text(itemText.toString()), 1, 2);
 
@@ -105,7 +105,7 @@ public class Directory extends Application {
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
 
         submitButton.setOnAction(event -> {
-            DirectoryServer.directoryButton(gridPane, nameField, submitButton, customer);
+            DirectoryServer.directoryButton(gridPane, nameField, submitButton, member);
         });
     }
 

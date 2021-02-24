@@ -13,7 +13,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import main.com.zvuk.java.server.dummy.DummyDatabase;
+import main.com.zvuk.java.server.Database;
 
 public class BusinessLogin extends Application {
 
@@ -109,11 +109,11 @@ public class BusinessLogin extends Application {
                 showAlert(Alert.AlertType.ERROR, gridPane.getScene().getWindow(), "Form Error!", "Please enter a password");
                 return;
             }
-            for (int i = 0; i < DummyDatabase.accounts.size(); i++) {
-                if(DummyDatabase.accounts.get(i).getEmail().equals(emailField.getText())){
-                    if(DummyDatabase.accounts.get(i).logIn(emailField.getText(), passwordField.getText())){
+            for (int i = 0; i < Database.accounts.size(); i++) {
+                if(Database.accounts.get(i).getEmail().equals(emailField.getText())){
+                    if(Database.accounts.get(i).logIn(emailField.getText(), passwordField.getText())){
                         System.out.println("Login Successful");
-                        MyLauncher.session.setAccount(DummyDatabase.accounts.get(i));
+                        MyLauncher.session.setAccount(Database.accounts.get(i));
                         Stage stage = (Stage) submitButton.getScene().getWindow();
                         stage.close();
                         MyLauncher.launcher();

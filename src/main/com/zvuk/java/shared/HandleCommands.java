@@ -1,7 +1,7 @@
 package main.com.zvuk.java.shared;
 
 import main.com.zvuk.java.util.data.AccountInformation;
-import main.com.zvuk.java.server.dummy.DummyDatabase;
+import main.com.zvuk.java.server.Database;
 import main.com.zvuk.java.server.Command;
 import main.com.zvuk.java.server.Packet;
 import main.com.zvuk.java.util.Connect;
@@ -35,8 +35,8 @@ public class HandleCommands {
 
     private static Command getPosition(Command c) {
         int position = 0;
-        for (Company company : DummyDatabase.companies) {
-            ArrayList<Customer> z = company.getMeetingQueue().getMembers();
+        for (Company company : Database.companies) {
+            ArrayList<Member> z = company.getMeetingQueue().getMembers();
             if (z.contains(c.object)) { // TODO: Check this out.
                 return new Command("display_position", String.valueOf(position));
             }
@@ -53,9 +53,9 @@ public class HandleCommands {
 
     private static void createAccount(Command c) throws ClassNotFoundException {
         AccountInformation o = (AccountInformation) c.object;
-        Customer customer = o.createCustomerAccount();
+        Member member = o.createCustomerAccount();
         try {
-            Connect.insert_new_account(Packet.toString(customer));
+            Connect.insert_new_account(Packet.toString(member));
         } catch (IOException e) {
             MessageHandlers.sendAlert("User already exists!");
         }

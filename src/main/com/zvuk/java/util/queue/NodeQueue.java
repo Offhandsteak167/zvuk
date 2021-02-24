@@ -2,7 +2,7 @@ package main.com.zvuk.java.util.queue;
 
 import main.com.zvuk.java.util.logger.Event;
 
-import static main.com.zvuk.java.server.dummy.DummyDatabase.logger;
+import static main.com.zvuk.java.server.Database.logger;
 
 /**
  * Represents a node-based queue.

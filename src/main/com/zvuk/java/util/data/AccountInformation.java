@@ -1,6 +1,6 @@
 package main.com.zvuk.java.util.data;
 
-import main.com.zvuk.java.shared.Customer;
+import main.com.zvuk.java.shared.Member;
 
 import java.io.Serializable;
 
@@ -20,10 +20,10 @@ public class AccountInformation implements Serializable {
         this.password = password;
     }
 
-    public Customer createCustomerAccount(){
-        Customer newCustomer = new Customer(fname,lname,email,password,address,payment);
+    public Member createCustomerAccount(){
+        Member newMember = new Member(fname,lname,email,password,address,payment);
         //Email.send(newCustomer.getEmail()); <- possible issues depending on main.com.zvuk.java.server
-        return newCustomer;
+        return newMember;
     }
 
     public void setPayment(String payment) {

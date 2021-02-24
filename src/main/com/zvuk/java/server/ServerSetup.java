@@ -1,13 +1,12 @@
 package main.com.zvuk.java.server;
 
-import main.com.zvuk.java.server.dummy.DummyDatabase;
 import main.com.zvuk.java.util.logger.Event;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static main.com.zvuk.java.server.dummy.DummyDatabase.logger;
+import static main.com.zvuk.java.server.Database.logger;
 
 public class ServerSetup {
     public static ArrayList<ProcessWrapper> processes;
@@ -15,7 +14,7 @@ public class ServerSetup {
     public static void start() throws IOException {
         logger.addEvent(new Event("INFO","Logger is online."));
 
-        DummyDatabase.getContents(new File("test.wtdb"));
+        //Database.getContents(new File("test.wtdb"));
         logger.addEvent(new Event("INFO","DummyDatabase is online."));
 
         processes = new ArrayList<>();

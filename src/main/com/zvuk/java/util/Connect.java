@@ -1,6 +1,6 @@
 package main.com.zvuk.java.util;
 
-import main.com.zvuk.java.server.dummy.DummyDatabase;
+import main.com.zvuk.java.server.Database;
 import main.com.zvuk.java.server.Packet;
 import main.com.zvuk.java.shared.Account;
 import main.com.zvuk.java.util.logger.Event;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Arrays;
 
-import static main.com.zvuk.java.server.dummy.DummyDatabase.logger;
+import static main.com.zvuk.java.server.Database.logger;
 
 /**
  *
@@ -18,12 +18,12 @@ import static main.com.zvuk.java.server.dummy.DummyDatabase.logger;
 public class Connect {
 
     public static boolean does_account_exist(String input) throws IOException, ClassNotFoundException {
-        return DummyDatabase.accounts.contains(Packet.fromString(input));
+        return Database.accounts.contains(Packet.fromString(input));
         //return DummyDatabase.containsObject(new File("test.wtdb"),input);
     }
 
     public static void  insert_new_account(String input) throws IOException, ClassNotFoundException {
-        DummyDatabase.accounts.add((Account) Packet.fromString(input));
+        Database.accounts.add((Account) Packet.fromString(input));
         /**
         DummyDatabase.addObject(new File("test.wtdb"), input);
         if (!does_account_exist(input)) {

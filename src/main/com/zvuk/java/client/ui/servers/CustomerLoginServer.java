@@ -7,7 +7,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import main.com.zvuk.java.client.ui.MyLauncher;
 import main.com.zvuk.java.client.ui.util.Alert;
-import main.com.zvuk.java.server.dummy.DummyDatabase;
+import main.com.zvuk.java.server.Database;
 
 public class CustomerLoginServer {
     public static void customerLoginSubmit(GridPane gridPane, TextField emailField, PasswordField passwordField, Button submitButton) {
@@ -19,11 +19,11 @@ public class CustomerLoginServer {
             Alert.sendAlert(gridPane, "Please enter a password");
             return;
         }
-        for (int i = 0; i < DummyDatabase.accounts.size(); i++) {
-            if(DummyDatabase.accounts.get(i).getEmail().equals(emailField.getText())){
-                if(DummyDatabase.accounts.get(i).logIn(emailField.getText(), passwordField.getText())){
+        for (int i = 0; i < Database.accounts.size(); i++) {
+            if(Database.accounts.get(i).getEmail().equals(emailField.getText())){
+                if(Database.accounts.get(i).logIn(emailField.getText(), passwordField.getText())){
                     System.out.println("Login Successful");
-                    MyLauncher.session.setAccount(DummyDatabase.accounts.get(i));
+                    MyLauncher.session.setAccount(Database.accounts.get(i));
                     Stage stage = (Stage) submitButton.getScene().getWindow();
                     stage.close();
                     MyLauncher.launcher();

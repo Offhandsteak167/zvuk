@@ -7,8 +7,8 @@ import main.com.zvuk.java.server.ServerSetup;
 import java.util.Date;
 
 public class Meeting {
-    Customer meetingCreator;
-    Business businessRep;
+    Member meetingCreator;
+    Member businessRep;
     final int waitTime;
     Process process;
     public boolean running;
@@ -16,7 +16,7 @@ public class Meeting {
     final int port;
     public String link;
 
-    public Meeting(Customer meetingCreator){
+    public Meeting(Member meetingCreator){
         this.meetingCreator = meetingCreator;
         waitTime = 0;
         process = null;
@@ -27,11 +27,11 @@ public class Meeting {
         link = null;
     }
 
-    public void setBusinessRep(Business b){
+    public void setBusinessRep(Member b){
         businessRep = b;
     }
 
-    public void setMeetingCreator(Customer c){
+    public void setMeetingCreator(Member c){
         meetingCreator = c;
     }
 

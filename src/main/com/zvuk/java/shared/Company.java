@@ -1,5 +1,7 @@
 package main.com.zvuk.java.shared;
 
+import org.zoodb.api.impl.ZooPC;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -7,12 +9,13 @@ import java.util.Objects;
 /**
  *
  */
-public class Company implements Serializable {
+public class Company extends ZooPC implements Serializable {
     private static int nextId = 0;
     public final int id;
     private String name;
     private final MeetingQueue queue;
     private ArrayList<Interaction> interactions;
+    private ArrayList<Channel> channels;
 
     /**
      * @param e
@@ -21,7 +24,7 @@ public class Company implements Serializable {
         interactions.add(e);
     }
 
-    final ArrayList<Business> employees = new ArrayList<>();
+    final ArrayList<Member> members = new ArrayList<>();
 
     /**
      * @param name
@@ -35,22 +38,22 @@ public class Company implements Serializable {
     /**
      *
      */
-    public Company(){
-        name = "";
+    public Company(int id){
+        name = "Brick";
+        this.id = id;
+        this.channels = new ArrayList<>();
         this.queue = new MeetingQueue();
-        id = nextId++;
-        queue.addMeetingToQueue(new Meeting(new Customer("Jake","Downie","jakedownie8@gmail.com","123","78 Battin","Plan 1")));
-        queue.addMeetingToQueue(new Meeting(new Customer("Jake","Downie","jakedownie8@gmail.com","123","78 Battin","Plan 1")));
-
     }
     final ArrayList<Interaction> currentInteractions = new ArrayList<>();
     final ArrayList<Interaction> interactionHistory = new ArrayList<>();
 
     public int getId(){ return this.id; }
-    public ArrayList<Business> getEmployees() { return this.employees; }
+    public ArrayList<Member> getMembers() { return this.members; }
 
-    public void addEmployee (Business newEmployee){ this.employees.add(newEmployee);}
-    public void removeEmployee (Business employee) {this.employees.remove(employee);}
+    public void addChannel(Channel channel){ this.channels.add(channel);}
+
+    public void addMember (Member newEmployee){ this.members.add(newEmployee);}
+    public void removeMember (Member employee) {this.members.remove(employee);}
 
     public void setName(String newName) { this.name = newName; }
     public String getName() { return this.name; }
@@ -73,7 +76,7 @@ public class Company implements Serializable {
                 ", name='" + name + '\'' +
                 ", queue=" + queue.toString() +
                 ", interactions=" + interactions +
-                ", employees=" + employees +
+                ", employees=" + members +
                 ", currentInteractions=" + currentInteractions +
                 ", interactionHistory=" + interactionHistory +
                 '}';

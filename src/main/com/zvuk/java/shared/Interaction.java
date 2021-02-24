@@ -7,7 +7,7 @@ public class Interaction {
     private final int rating;
     private Date e;
 
-    public Interaction(Date s, int rate, Customer c, Business b){
+    public Interaction(Date s, int rate, Member c, Member b){
         this.e = null;
         rating = rate;
     }

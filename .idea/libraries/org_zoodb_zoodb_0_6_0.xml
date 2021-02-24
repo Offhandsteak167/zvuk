@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="org.zoodb:zoodb:0.6.0" type="repository">
+    <properties maven-id="org.zoodb:zoodb:0.6.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/zoodb-0.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jdo-api-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/transaction-api-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jta-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
