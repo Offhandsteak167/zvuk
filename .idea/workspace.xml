@@ -4,27 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="loggers">
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/server/PacketTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/data/AccountInformationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/email/CreateGmailTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/email/EmailTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/LinkHandlerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/MeetingHandlerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/MessageHandlersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/handlers/UserHandlerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/util/logger/EventTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/ServerControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebAttributeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebContentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebElementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/WebPageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main/com/zvuk/java/webapp/parser/HTMLParserTest.java" afterDir="false" />
+    <list default="true" id="10581b0e-95d2-4a55-aac6-8b539749d086" name="Default Changelist" comment="tests start">
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Channel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Chat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/ChatHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/RoleContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/client/NetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/client/NetworkClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/server/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/server/Packet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/webapp/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zvuk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/zvuk.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/zvuk/java/shared/Account.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JUnit4 &amp; Mockito" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -225,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614190267612</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="tests start">
+      <created>1614193911497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614193911498</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +243,8 @@
     <MESSAGE value="loading entire html documents for templates" />
     <MESSAGE value="pulling information from server and server setup" />
     <MESSAGE value="loggers" />
-    <option name="LAST_COMMIT_MESSAGE" value="loggers" />
+    <MESSAGE value="tests start" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests start" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

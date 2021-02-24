@@ -1,6 +1,7 @@
 package main.com.zvuk.java.shared;
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Date;
 
 import main.com.zvuk.java.util.cryptic;
 
@@ -18,6 +19,12 @@ public abstract class Account implements Serializable {
     public boolean elevated = false;
     private final byte[] password;
     public Meeting currentMeeting;
+
+    //New Migration Code.
+    private int user_id;
+    private int user_role_id;
+    private String user_name;
+    private Date user_dob;
 
     /**
      * Constructor for an Account, encrypts passwords based
@@ -56,6 +63,14 @@ public abstract class Account implements Serializable {
         this.currentMeeting = meeting;
     }
 
+    public void sendMessageReply(Chat chat, String message){
+        Chat newChat = new Chat(message,this);
+        chat.addReply(newChat);
+    }
+    public void sendNewMessage(Channel channel, String message){
+        Chat newChat = new Chat(message,this);
+        channel.addMessage(newChat);
+    }
 
 
     /**
